@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="table.css" rel="stylesheet">
+    <!-- googleFonts関係 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- ここまで -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <title>Enchant.jsの基礎</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Enchant.jsの基礎</h1>
+    </div>
+    <h2>0.準備</h2>
+    <ol>
+        <li>Enchant.jsでのゲーム開発では、<a href="https://code.9leap.net/" target="_blank">code9.leap</a>というツールを使用します。</li>
+        <li><a href="https://code.9leap.net/" target="_blank">code9.leap</a>にアクセスして、アカウントを作成し、ログインできる状態にしてください。</li>
+        <li>今回は、ボタンの画像が必要です。インターネットからフリー素材を拾ってきてください。</li>
+        <li>macを使用している場合は、Finder設定の変更が必要です。<a href="https://psrecipe.com/file_size_mac/" target="_blank">詳しくはこちら</a>。</li>
+    </ol>
+
+    <h2>今回作るゲーム</h2>
+    <p class="theme">
+        今回は、<span class="gtitle">ボタン連打ゲーム</span>をenchant.jsで作っていきます！
+    </p>
+
+    <h2>1.はじめに･･</h2>
+        <p>
+            Enchant.jsは、JavaScriptというプログラミング言語をゲーム作成に特化させた言語で、
+            誰でも簡単にゲームを制作することができます。<br>
+            ここでは、Enchant.jsの基本的な書き方を学びながら、簡単なゲームを制作していきます。<br>
+            まずは、初期設定のコードから書いていきましょう。
+        </p>
+        <pre><code class="lang-js">
+        //初期設定
+        window.focus();
+        enchant(); // enchant.js を有効化
+
+        window.onload = function() 
+        {
+            var game = new Game(320, 320); // ゲーム画面のサイズを指定
+            game.fps = 30; // フレームレート（1秒間のフレーム数）
+            game.preload('button.png'); // 画像を事前読み込み（今回はボタンの画像）
+
+            game.onload = function() 
+            {
+                //ここより下にコードを記述
+            };
+            game.start(); // ゲームスタート
+        };
+        </code></pre>
+        <p>
+            上に示したコードがenchant.jsの基本となります。
+            画像の読み込みに使用する名前は自由なので、自分がわかる名前にしておくことをおすすめします！
+        </p>
+
+    <h2>2.スコアラベルの表示</h2>
+    <p>
+        ここからいよいよ、本格的なプログラミングをしていきます！
+    </p>
+
+    <pre><code class="lang-js">
+        game.onload = function() {
+            var score = 0; //変数「スコア」を0にする。
+            var label = new Label("Score: " + score);
+            label.x = 10; //x座標指定
+            label.y = 10; //y座標指定
+            //メインシーンにラベル（この場合はスコア）を表示する。
+            game.rootScene.addChild(label); 
+        };
+    </code></pre>
+    <p>
+        ここで、最終行の、<pre><code class="lang-js">game.rootScene.addChild(label); </code></pre>
+        について少し解説します。<br>
+        すべてのプロジェクト（スプライトやラベルなど）は、シーンに追加することで画面に表示されます。<br>
+        そして、上のコードを使うことで、スプライトやラベルを画面に追加できます。
+    </p>
+
+    <footer>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+</body>
+</html>

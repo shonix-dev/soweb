@@ -1,0 +1,62 @@
+.title h1{
+    font-family: "Noto Sans JP", sans-serif;
+    color: #29a987;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+}
+
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.img-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: auto;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.text{
+    margin: 10px 0px;
+}
+
+.introduction{
+    border: 1.5px black solid;
+    border-radius: 10px;
+    padding:5px;
+    max-width: 900px;
+}
+
+img{
+    width:250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 480px){
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+img{
+    width: 100%;
+    max-width: 300px;
+}
+
+.text{
+    align-self: flex-start;
+}
+}
