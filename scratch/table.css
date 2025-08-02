@@ -35,3 +35,7 @@ body{
         color: blue;  /* 常に青 */
         text-decoration: underline;
     }
+
+footer{
+    font-size: 15px;
+}
