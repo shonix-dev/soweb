@@ -11,15 +11,7 @@ h2{
     color: #29a987;
     font-weight: 800;
     font-style: normal;
-    font-size: 35px;
-}
-
-h3{
-    font-family: "Noto Sans JP", sans-serif;
-    color: #29a987;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 body{
@@ -27,13 +19,7 @@ body{
     color: black;
     font-weight: 400;
     font-style: normal;
-    font-size: 15px;
-}
-
-.gtitle{
-    font-size: 24px;
-    color: black;
-    font-weight: 700;
+    font-size: 18px;
 }
 
     a:link,
@@ -44,6 +30,7 @@ body{
         text-decoration: underline;
     }
 
+
 footer{
-    font-size: 12px;
+    font-size: 15px;
 }
