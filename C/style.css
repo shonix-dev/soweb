@@ -12,6 +12,9 @@ h2{
     font-weight: 800;
     font-style: normal;
     font-size: 30px;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-top: 1.5em;
 }
 
 body{
@@ -30,6 +33,28 @@ body{
         text-decoration: underline;
     }
 
+    .b{
+        font-weight: bold;
+        color: #29a987;
+        font-size: 18px;
+    }
+
+    .lang-section p {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.lang-section {
+    margin: 1em 0;
+    padding: 0.8em;
+    border-left: 5px solid #4CAF50;
+    background: #f9f9f9;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #d6336c; /* 赤寄りの強調色 */
+}
 
 footer{
     font-size: 15px;

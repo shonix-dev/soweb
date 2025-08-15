@@ -16,6 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <!-- C++ 用 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+    <!-- C# 用 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
 
 </head>
 <body>
@@ -28,20 +32,54 @@
         この内容は、どのプログラミング言語にも共通することです。知っておいて損はありません。
     </p>
 
-    <div class="table">
-        <ul>
-            <li>あああ</li>
-            <li>いいい</li>
-        </ul>
-    </div>
-        <pre><code class="language-c">
+<h2>Main関数 / Mainメソッド</h2>
+<p>
+    C言語（C, C++）では、関数定義を除き、基本的にすべての命令を
+    <span class="highlight">main関数</span> の中に記述します。
+</p>
+<p>
+    C#では、基本的には <span class="highlight">Mainメソッド</span> の中に命令を記述します。<br>
+    <span class="highlight">Mainメソッド</span> は、他の言語でいう <span class="highlight">main関数</span> と同じ役割を持ちます。
+</p>
+
+<div class="lang-section">
+<p>C言語の場合</p>
+<pre><code class="language-c line-numbers">
 #include &lt;stdio.h&gt;
 
 int main() {
-    printf("Hello, world!\n");
+    //処理内容をここに書く。
     return 0;
 }
 </code></pre>
+</div>
+
+<div class="lang-section">
+<p>C++の場合</p>
+<pre><code class="language-cpp line-numbers">
+#include &lt;iostream&gt;
+
+int main() {
+    //処理内容をここに書く。
+    return 0;
+}
+</code></pre>
+</div>
+
+<div class="lang-section">
+<p>C#の場合</p>
+<pre><code class="language-csharp line-numbers">
+using System; 
+
+class Program
+{
+    static void Main(string[] args) 
+    {
+        //ここに処理を書く
+    }
+}
+</code></pre>
+</div>
 
     <footer>
         <p>&copy; 2025 MyWebsite. All rights reserved.</p>
