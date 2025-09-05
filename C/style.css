@@ -12,7 +12,7 @@ h2{
     font-weight: 800;
     font-style: normal;
     font-size: 30px;
-    border-bottom: 3px solid #4CAF50;
+    /* border-bottom: 3px solid #4CAF50; */
     padding-bottom: 5px;
     margin-top: 1.5em;
 }
