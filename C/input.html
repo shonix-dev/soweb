@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Prism.js（シンタックスハイライト） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
 </head>
 <body>
     <div class="title">
@@ -25,8 +31,42 @@
 
     <h2>変数について</h2>
     <p>
-        
+        C言語（C/C++/C#）では、変数を宣言する際、<span class="highlight">変数の型を指定したうえで宣言する必要</span>があります。<br>
+        具体的にはこんな感じです。<br>
+        下はCのプログラム例ですが、C++やC#でも同様に定義できます。
     </p>
+
+    <div class="lang-section">
+    <p>変数宣言</p>
+    <pre><code class="language-c line-numbers">
+    #include &lt;stdio.h&gt;
+
+    int main() {
+        int a = 10; //数値型
+        char b[100] = "おにぎり"; //文字型
+        return 0;
+    }
+    </code></pre>
+    </div>
+
+    <h3>変数の型の種類</h3>
+    <p>代表的な変数の型を表形式にまとめます。</p>
+    <table>
+        <tr id = "title">
+            <th>型の名前</th>
+            <th>意味</th>
+        </tr>
+        <tr>
+            <td>int型</td>
+            <td>数値（主に整数）を扱う。</td>
+        </tr>
+        <tr>
+            <td>char型</td>
+            <td>単体では、1バイトの文字列を扱う。<br>[]内に数値をいれると複数の文字列を扱える。</td>
+        </tr>
+            <td>floot型</td>
+            <td>小数を扱う。</td>
+    </table>
 
     <h2>標準入出力について</h2>
 

@@ -22,10 +22,14 @@ h2{
     margin-top: 1.5em;
 }
 
+h3{
+    color:#29a987
+}
+
 .goals{
     border: 2px solid #d6336c; 
     padding: 10px;
-    width: 500px;
+    max-width: 500px;
 }
 
 body{
@@ -34,6 +38,21 @@ body{
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
+}
+
+#title th {
+    text-align: center;
+    background-color:rgb(187, 187, 187);
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
 }
 
     a:link,
