@@ -23,30 +23,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
   </head>
   <body>
-    <div class="title">
-      <h1>変数と標準入出力</h1>
-    </div>
+    <div class="container">
+      <div class="title">
+        <h1>変数と標準入出力</h1>
+      </div>
+      <div class="goals">
+        <h2>目標</h2>
+        <ul>
+          <li>変数の概要を理解し、正確に使用できる。</li>
+          <li>C言語における標準入出力のやり方を理解できる。</li>
+        </ul>
+      </div>
 
-    <div class="goals">
-      <h2>目標</h2>
-      <ul>
-        <li>変数の概要を理解し、正確に使用できる。</li>
-        <li>C言語における標準入出力のやり方を理解できる。</li>
-      </ul>
-    </div>
+      <h2>変数について</h2>
+      <p>
+        C言語（C/C++/C#）では、変数を宣言する際、<span class="highlight"
+          >変数の型を指定したうえで宣言する必要</span
+        >があります。<br />
+        具体的にはこんな感じです。<br />
+        下はCのプログラム例ですが、C++やC#でも同様に定義できます。
+      </p>
 
-    <h2>変数について</h2>
-    <p>
-      C言語（C/C++/C#）では、変数を宣言する際、<span class="highlight"
-        >変数の型を指定したうえで宣言する必要</span
-      >があります。<br />
-      具体的にはこんな感じです。<br />
-      下はCのプログラム例ですが、C++やC#でも同様に定義できます。
-    </p>
-
-    <div class="lang-section">
-      <p>変数宣言</p>
-      <pre><code class="language-c line-numbers">
+      <div class="lang-section">
+        <p>変数宣言</p>
+        <pre><code class="language-c line-numbers">
     #include &lt;stdio.h&gt;
 
     int main() {
@@ -55,39 +55,64 @@
         return 0;
     }
     </code></pre>
-    </div>
+      </div>
 
-    <h3>変数の型の種類</h3>
-    <p>代表的な変数の型を表形式にまとめます。</p>
-    <table>
-      <tr id="title">
-        <th>型の名前</th>
-        <th>意味</th>
-      </tr>
-      <tr>
-        <td>int型</td>
-        <td>数値（主に整数）を扱う。</td>
-      </tr>
-      <tr>
-        <td>char型</td>
-        <td>
-          単体では、1バイトの文字列を扱う。<br />[]内に数値をいれると複数の文字列を扱える。
-        </td>
-      </tr>
-      <tr>
-        <td>floot型,<br />double型</td>
-        <td>小数を扱う。</td>
-      </tr>
-      <tr>
-        <td>bool型</td>
-        <td>真偽値（true/false）を扱う</td>
-      </tr>
-    </table>
+      <h3>変数の型の種類</h3>
+      <p>代表的な変数の型を表形式にまとめます。</p>
+      <table>
+        <tr id="title">
+          <th>型の名前</th>
+          <th>意味</th>
+        </tr>
+        <tr>
+          <td>int型</td>
+          <td>数値（主に整数）を扱う。</td>
+        </tr>
+        <tr>
+          <td>char型</td>
+          <td>
+            単体では、1バイトの文字列を扱う。<br />[]内に数値をいれると複数の文字列を扱える。
+          </td>
+        </tr>
+        <tr>
+          <td>floot型,<br />double型</td>
+          <td>小数を扱う。</td>
+        </tr>
+        <tr>
+          <td>bool型</td>
+          <td>真偽値（true/false）を扱う</td>
+        </tr>
+      </table>
 
-    <h2>標準入出力について</h2>
+      <h2>標準入出力について</h2>
+      <p>
+        <span class="highlight">標準入出力</span
+        >とは、コンピュータが外部とやり取りをするための基本的な仕組みです。<br />
+        主に、<span class="highlight"
+          >キーボードからの入力を受け取ったり、コンピュータが結果を出力する際</span
+        >に使われるプログラムのことを指すことが多いです。<br />
+        標準入出力は言語によってプログラムの書き方が異なるため、1つずつ見ていきましょう！
+      </p>
+      <h3>Cの場合</h3>
+      <p>Cでは、標準入出力を下のように記述します。</p>
+      <div class="lang-section">
+        <p>標準入出力</p>
+        <pre><code class="language-c line-numbers">
+    #include &lt;stdio.h&gt;
 
-    <footer>
-      <p>&copy; 2025 MyWebsite. All rights reserved.</p>
-    </footer>
+    int main(){
+      int number;
+      printf("数値を入力:")
+      scanf("%d",&number); //標準入力
+      printf("入力された数値:%d\n",number); //入力された数値を出力
+      return 0;
+    }
+    </code></pre>
+      </div>
+      <footer>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+      </footer>
+      </div>
+  </div>
   </body>
 </html>

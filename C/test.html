@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      /* —— あなたのCSS（最小修正版） —— */
+      .title h1 {
+        font-family: "Noto Sans JP", sans-serif;
+        color: #29a987;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 50px;
+        margin: 0; /* 余白でずれないように */
+        display: block !important; /* どこかで非表示化されている場合の保険 */
+      }
+
+      .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      body {
+        margin: 0; /* これ大事：デフォルト余白を消す */
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 18px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column; /* フッターを下へ */
+      }
+
+      main {
+        flex: 1; /* 余白をここに持たせる */
+        display: flex;
+        justify-content: center; /* 横センター */
+        align-items: center; /* 縦センター */
+      }
+
+      footer {
+        margin-top: auto;
+        font-size: 15px;
+        text-align: center;
+        padding: 8px 0;
+        background: #f4f4f4;
+        color: #333;
+      }
+
+      /* 参考：テーブル見栄え（必要なら） */
+      #title th {
+        text-align: center;
+        background: #bbb;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+
+      /* デバッグ用：見え方をチェックしたい時に有効化
+.title{ outline:2px solid red; }
+*/
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="title">
+          <h1>変数と標準入出力</h1>
+        </div>
+        <p>ここに本文…</p>
+      </div>
+    </main>
+
+    <footer>&copy; 2025 MyWebsite. All rights reserved.</footer>
+  </body>
+</html>
