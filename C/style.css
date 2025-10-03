@@ -1,91 +1,94 @@
-.title h1{
-    font-family: "Noto Sans JP", sans-serif;
-    color: #29a987;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 50px;
+.title h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #29a987;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 50px;
 }
 
-.goals h2{
-    margin: 0;
-    padding: 0;
+.goals h2 {
+  margin: 0;
+  padding: 0;
 }
 
-h2{
-    font-family: "Noto Sans JP", sans-serif;
-    color: #29a987;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 30px;
-    /* border-bottom: 3px solid #4CAF50; */
-    padding-bottom: 5px;
-    margin-top: 1.5em;
+h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #29a987;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  /* border-bottom: 3px solid #4CAF50; */
+  padding-bottom: 5px;
+  margin-top: 1.5em;
 }
 
-h3{
-    color:#29a987
+h3 {
+  color: #29a987;
 }
 
-.goals{
-    border: 2px solid #d6336c; 
-    padding: 10px;
-    max-width: 500px;
+.goals {
+  border: 2px solid #d6336c;
+  padding: 10px;
+  max-width: 500px;
 }
 
-body{
-    font-family: "Noto Sans JP", sans-serif;
-    color: black;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: black;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
 }
 
 #title th {
-    text-align: center;
-    background-color:rgb(187, 187, 187);
+  text-align: center;
+  background-color: rgb(187, 187, 187);
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
+th,
+td {
+  padding: 8px;
+  text-align: left;
 }
 
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-        color: blue;  /* 常に青 */
-        text-decoration: underline;
-    }
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: blue; /* 常に青 */
+  text-decoration: underline;
+}
 
-    .b{
-        font-weight: bold;
-        color: #29a987;
-        font-size: 18px;
-    }
+.b {
+  font-weight: bold;
+  color: #29a987;
+  font-size: 18px;
+}
 
-    .lang-section p {
-    font-weight: bold;
-    margin-bottom: 0.5em;
+.lang-section p {
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
 .lang-section {
-    margin: 1em 0;
-    padding: 0.8em;
-    border-left: 5px solid #4CAF50;
-    background: #f9f9f9;
+  margin: 1em 0;
+  padding: 0.8em;
+  border-left: 5px solid #4caf50;
+  background: #f9f9f9;
 }
 
 .highlight {
-    font-weight: bold;
-    color: #d6336c; /* 赤寄りの強調色 */
+  font-weight: bold;
+  color: #d6336c; /* 赤寄りの強調色 */
 }
 
-footer{
-    font-size: 15px;
+footer {
+  font-size: 15px;
 }

@@ -1,66 +1,66 @@
-.title h1{
-    font-family: "Noto Sans JP", sans-serif;
-    color: #29a987;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 50px;
+.title h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #29a987;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 50px;
 }
 
-body{
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
 }
 
-.img-container{
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    width: auto;
+.img-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: auto;
 }
 
-.name{
-    font-size: 30px;
-    font-weight: bold;
-    margin: 10px 0px;
+.name {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0px;
 }
 
-.text{
-    margin: 10px 0px;
+.text {
+  margin: 10px 0px;
 }
 
-.introduction{
-    border: 1.5px black solid;
-    border-radius: 10px;
-    padding:5px;
-    max-width: 900px;
+.introduction {
+  border: 1.5px black solid;
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 900px;
 }
 
-img{
-    width:250px;
-    height: 250px;
-    object-fit: cover;
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
-@media screen and (max-width: 480px){
-.img-container{
+@media screen and (max-width: 480px) {
+  .img-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: auto;
-}
+  }
 
-img{
+  img {
     width: 100%;
     max-width: 300px;
-}
+  }
 
-.text{
+  .text {
     align-self: flex-start;
-}
+  }
 }
 
-footer{
-    font-size: 15px;
+footer {
+  font-size: 15px;
 }

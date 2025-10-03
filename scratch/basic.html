@@ -1,83 +1,206 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="table.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="table.css" rel="stylesheet" />
     <!-- googleFonts関係 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- ここまで -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
     <title>scratchの基礎</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="table.html">戻る</a>
     <div class="title">
-        <h1><ruby>Scratch<rt>スクラッチ</rt></ruby>の<ruby>基礎<rt>きそ</rt></ruby></h1>
+      <h1>
+        <ruby>Scratch<rt>スクラッチ</rt></ruby
+        >の<ruby>基礎<rt>きそ</rt></ruby>
+      </h1>
     </div>
     <div class="table">
-        <nav>
-        <h2><ruby>目次<rt>もくじ</rt></ruby></h2>
+      <nav>
+        <h2>
+          <ruby>目次<rt>もくじ</rt></ruby>
+        </h2>
+        <ul>
+          <li>
+            <a href="#sec1">scratchとは？</a>
             <ul>
-                <li><a href="#sec1">scratchとは？</a>
-                <ul>
-                    <li><a href="#sec1-1">基本の使い方</a>
-                    <li><a href="#sec1-2">学べること</a>
-                    <li><a href="#sec1-3">始めよう！</a>
-                </ul></li>
-                <li><a href="#sec2">【参考】ゲーム集</a>
-                </li>
+              <li><a href="#sec1-1">基本の使い方</a></li>
+              <li><a href="#sec1-2">学べること</a></li>
+              <li><a href="#sec1-3">始めよう！</a></li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="#sec2">【参考】ゲーム集</a></li>
+        </ul>
+      </nav>
     </div>
 
     <div class="content">
-        <div class="sec1">
-            <h2 id="sec1"><ruby>Scratch<rt>スクラッチ</rt></ruby>とは？</h2>
-            <p>
-                <ruby>Scratch<rt>スクラッチ</rt></ruby>は、<ruby>子<rt>こ</rt></ruby>どもから<ruby>大人<rt>おとな</rt></ruby>まで<ruby>楽<rt>たの</rt></ruby>しめる、ブロックを<ruby>使<rt>つか</rt></ruby>った<ruby>プログラミング<rt>ぷろぐらみんぐ</rt></ruby>の<ruby>言語<rt>げんご</rt></ruby>です。
-                <ruby>直感的<rt>ちょっかんてき</rt></ruby>な<ruby>操作<rt>そうさ</rt></ruby>でアニメやゲームを<ruby>作<rt>つく</rt></ruby>ることができます。
-            </p>
+      <div class="sec1">
+        <h2 id="sec1">
+          <ruby>Scratch<rt>スクラッチ</rt></ruby
+          >とは？
+        </h2>
+        <p>
+          <ruby>Scratch<rt>スクラッチ</rt></ruby
+          >は、<ruby>子<rt>こ</rt></ruby
+          >どもから<ruby>大人<rt>おとな</rt></ruby
+          >まで<ruby>楽<rt>たの</rt></ruby
+          >しめる、ブロックを<ruby>使<rt>つか</rt></ruby
+          >った<ruby>プログラミング<rt>ぷろぐらみんぐ</rt></ruby
+          >の<ruby>言語<rt>げんご</rt></ruby
+          >です。 <ruby>直感的<rt>ちょっかんてき</rt></ruby
+          >な<ruby>操作<rt>そうさ</rt></ruby
+          >でアニメやゲームを<ruby>作<rt>つく</rt></ruby
+          >ることができます。
+        </p>
 
-            <h2 id="sec1-1"><ruby>基本<rt>きほん</rt></ruby>の<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby></h2>
-            <ul>
-                <li><strong><ruby>スプライト<rt>すぷらいと</rt></ruby>の<ruby>選択<rt>せんたく</rt></ruby>：</strong>キャラクターや<ruby>物体<rt>ぶったい</rt></ruby>を<ruby>選<rt>えら</rt></ruby>びます。</li>
-                <li><strong>ブロックを<ruby>組<rt>く</rt></ruby>み<ruby>立<rt>た</rt></ruby>てる：</strong><ruby>動<rt>うご</rt></ruby>き・<ruby>音<rt>おと</rt></ruby>・<ruby>見<rt>み</rt></ruby>た<ruby>目<rt>め</rt></ruby>などの<ruby>命令<rt>めいれい</rt></ruby>ブロックを<ruby>組<rt>く</rt></ruby>み<ruby>合<rt>あ</rt></ruby>わせます。</li>
-                <li><strong><ruby>背景<rt>はいけい</rt></ruby>や<ruby>位置<rt>いち</rt></ruby>の<ruby>設定<rt>せってい</rt></ruby>：</strong>ステージの<ruby>背景<rt>はいけい</rt></ruby>や<ruby>配置<rt>はいち</rt></ruby>を<ruby>決<rt>き</rt></ruby>めます。</li>
-                <li><strong><ruby>実行<rt>じっこう</rt></ruby>：</strong>「<ruby>旗<rt>はた</rt></ruby>」ボタンをクリックして<ruby>動作<rt>どうさ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>します。</li>
-            </ul>
+        <h2 id="sec1-1">
+          <ruby>基本<rt>きほん</rt></ruby
+          >の<ruby>使<rt>つか</rt></ruby
+          >い<ruby>方<rt>かた</rt></ruby>
+        </h2>
+        <ul>
+          <li>
+            <strong
+              ><ruby>スプライト<rt>すぷらいと</rt></ruby
+              >の<ruby>選択<rt>せんたく</rt></ruby
+              >：</strong
+            >キャラクターや<ruby>物体<rt>ぶったい</rt></ruby
+            >を<ruby>選<rt>えら</rt></ruby
+            >びます。
+          </li>
+          <li>
+            <strong
+              >ブロックを<ruby>組<rt>く</rt></ruby
+              >み<ruby>立<rt>た</rt></ruby
+              >てる：</strong
+            ><ruby>動<rt>うご</rt></ruby
+            >き・<ruby>音<rt>おと</rt></ruby
+            >・<ruby>見<rt>み</rt></ruby
+            >た<ruby>目<rt>め</rt></ruby
+            >などの<ruby>命令<rt>めいれい</rt></ruby
+            >ブロックを<ruby>組<rt>く</rt></ruby
+            >み<ruby>合<rt>あ</rt></ruby
+            >わせます。
+          </li>
+          <li>
+            <strong
+              ><ruby>背景<rt>はいけい</rt></ruby
+              >や<ruby>位置<rt>いち</rt></ruby
+              >の<ruby>設定<rt>せってい</rt></ruby
+              >：</strong
+            >ステージの<ruby>背景<rt>はいけい</rt></ruby
+            >や<ruby>配置<rt>はいち</rt></ruby
+            >を<ruby>決<rt>き</rt></ruby
+            >めます。
+          </li>
+          <li>
+            <strong
+              ><ruby>実行<rt>じっこう</rt></ruby
+              >：</strong
+            >「<ruby>旗<rt>はた</rt></ruby
+            >」ボタンをクリックして<ruby>動作<rt>どうさ</rt></ruby
+            >を<ruby>確認<rt>かくにん</rt></ruby
+            >します。
+          </li>
+        </ul>
 
-            <h2 id="sec1-2"><ruby>Scratch<rt>スクラッチ</rt></ruby>で<ruby>学<rt>まな</rt></ruby>べること</h2>
-            <ul>
-                <li><ruby>論理的思考<rt>ろんりてきしこう</rt></ruby></li>
-                <li><ruby>問題解決能力<rt>もんだいかいけつのうりょく</rt></ruby></li>
-                <li><ruby>創造力<rt>そうぞうりょく</rt></ruby>と<ruby>表現力<rt>ひょうげんりょく</rt></ruby></li>
-                <li><ruby>基本概念<rt>きほんがいねん</rt></ruby>（ループ、<ruby>条件分岐<rt>じょうけんぶんき</rt></ruby>、<ruby>変数<rt>へんすう</rt></ruby>など）</li>
-            </ul>
+        <h2 id="sec1-2">
+          <ruby>Scratch<rt>スクラッチ</rt></ruby
+          >で<ruby>学<rt>まな</rt></ruby
+          >べること
+        </h2>
+        <ul>
+          <li>
+            <ruby>論理的思考<rt>ろんりてきしこう</rt></ruby>
+          </li>
+          <li>
+            <ruby>問題解決能力<rt>もんだいかいけつのうりょく</rt></ruby>
+          </li>
+          <li>
+            <ruby>創造力<rt>そうぞうりょく</rt></ruby
+            >と<ruby>表現力<rt>ひょうげんりょく</rt></ruby>
+          </li>
+          <li>
+            <ruby>基本概念<rt>きほんがいねん</rt></ruby
+            >（ループ、<ruby>条件分岐<rt>じょうけんぶんき</rt></ruby
+            >、<ruby>変数<rt>へんすう</rt></ruby
+            >など）
+          </li>
+        </ul>
 
-            <h2 id="sec1-3"><ruby>始<rt>はじ</rt></ruby>めてみよう！</h2>
-            <p>
-                <ruby>公式<rt>こうしき</rt></ruby>サイト（<a href="https://scratch.mit.edu" target="_blank">https://scratch.mit.edu</a>）にアクセスして、<ruby>無料<rt>むりょう</rt></ruby>で<ruby>プロジェクト<rt>ぷろじぇくと</rt></ruby>を<ruby>作成<rt>さくせい</rt></ruby>してみましょう！
-            </p>
-        </div>
+        <h2 id="sec1-3">
+          <ruby>始<rt>はじ</rt></ruby
+          >めてみよう！
+        </h2>
+        <p>
+          <ruby>公式<rt>こうしき</rt></ruby
+          >サイト（<a href="https://scratch.mit.edu" target="_blank"
+            >https://scratch.mit.edu</a
+          >）にアクセスして、<ruby>無料<rt>むりょう</rt></ruby
+          >で<ruby>プロジェクト<rt>ぷろじぇくと</rt></ruby
+          >を<ruby>作成<rt>さくせい</rt></ruby
+          >してみましょう！
+        </p>
+      </div>
 
-        <div class="sec2">
-            <h2 id="sec2">【<ruby>参考<rt>さんこう</rt></ruby>】ゲーム<ruby>集<rt>しゅう</rt></ruby></h2>
-            <p>ここでは、<ruby>過去<rt>かこ</rt></ruby>に<ruby>鬼木<rt>おにき</rt></ruby>が<ruby>制作<rt>せいさく</rt></ruby>したゲームをいくつか<ruby>紹介<rt>しょうかい</rt></ruby>します。</p>
-            <h3>1:マルバツゲーム（<ruby>三目並<rt>さんもくなら</rt></ruby>べ）</h3>
-            <iframe src="https://scratch.mit.edu/projects/1186221226/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <div class="sec2">
+        <h2 id="sec2">
+          【<ruby>参考<rt>さんこう</rt></ruby
+          >】ゲーム<ruby>集<rt>しゅう</rt></ruby>
+        </h2>
+        <p>
+          ここでは、<ruby>過去<rt>かこ</rt></ruby
+          >に<ruby>鬼木<rt>おにき</rt></ruby
+          >が<ruby>制作<rt>せいさく</rt></ruby
+          >したゲームをいくつか<ruby>紹介<rt>しょうかい</rt></ruby
+          >します。
+        </p>
+        <h3>
+          1:マルバツゲーム（<ruby>三目並<rt>さんもくなら</rt></ruby
+          >べ）
+        </h3>
+        <iframe
+          src="https://scratch.mit.edu/projects/1186221226/embed"
+          allowtransparency="true"
+          width="485"
+          height="402"
+          frameborder="0"
+          scrolling="no"
+          allowfullscreen
+        ></iframe>
 
-            <h3>2:<ruby>空中遊泳<rt>くうちゅうゆうえい</rt></ruby>ゲーム</h3>
-            <iframe src="https://scratch.mit.edu/projects/1116612115/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
+        <h3>
+          2:<ruby>空中遊泳<rt>くうちゅうゆうえい</rt></ruby
+          >ゲーム
+        </h3>
+        <iframe
+          src="https://scratch.mit.edu/projects/1116612115/embed"
+          allowtransparency="true"
+          width="485"
+          height="402"
+          frameborder="0"
+          scrolling="no"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
     <footer>
-        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+      <p>&copy; 2025 MyWebsite. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
