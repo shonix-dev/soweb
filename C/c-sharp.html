@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- シンタックスハイライト -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <title>C#の基礎</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>C#大全</h1>
+      </div>
+      <p>C#のプログラムの書き方のルールを見ていきましょう！</p>
+      <h2>目次</h2>
+      <ul>
+        <li>Visual Studio Codeのインストール</li>
+        <li>C#を動かせるようにする</li>
+        <li>変数と標準入出力</li>
+        <li>条件分岐と繰り返し</li>
+        <li>配列</li>
+        <li>辞書型、構造体</li>
+        <li>クラス、継承、ポリモーフィズム</li>
+      </ul>
+      <h2>Visual Studio Codeのインストール</h2>
+      <p>
+        Visual Studio
+        Code（通称:VS-Code）は、プログラムを書くためのソフトウェア（コードエディタ）です。<br />
+        コードエディタがあるか否かで、コードの書きやすさが変わります。必ずインストールしましょう！<br />
+      </p>
+      <a href="https://code.visualstudio.com/download" target="_blank"
+        >インストールはこちら</a
+      >
+      <div class="goals">
+      <h2>注意！</h2>
+      <p>
+        Visual Studio for Macは、2024 年 8 月 31 日を持って廃止されています。<br/>
+        Visual Studio for Windowsは、現在もリリースされています。<br/>
+        <a href="https://learn.microsoft.com/ja-jp/lifecycle/announcements/visual-studio-mac-end-of-servicing">詳しくはこちら</a>
+      </p>
+      </div>
+      <h2>C#を動かせるようにする</h2>
+      <p>
+        次に、C#をVS-codeで動かせるようにしましょう。<br/>
+        やり方はいくつかあるので、インターネットで調べたうえで、一番やりやすい方法を選択しましょう。<br/>
+        一例として、下のような開発ツールがあります。
+        <ul>
+          <li><a href="https://dotnet.microsoft.com/ja-jp/download/visual-studio-sdks"> .NET SDK</a></li>
+          <li><a href="https://learn.microsoft.com/ja-jp/visualstudio/subscriptions/vs-c-sharp-dev-kit">C# Dev Kit</a></li>
+        </ul>
+        ご参考までに〜
+      </p>
+      <h2>標準入出力について</h2>
+      <p>
+        <span class="highlight">標準入出力</span
+        >とは、コンピュータが外部とやり取りをするための基本的な仕組みです。<br />
+        主に、<span class="highlight"
+          >キーボードからの入力を受け取ったり、コンピュータが結果を出力する際</span
+        >に使われるプログラムのことを指すことが多いです。<br />
+
+      </p>
+
+      <h2>変数</h2>
+          <p>
+        C言語（C/C++/C#）では、変数を宣言する際、<span class="highlight"
+          >変数の型を指定したうえで宣言する必要</span
+        >があります。<br />
+        具体的にはこんな感じです。<br />
+      </p>
+
+      <div class="lang-section">
+        <p>変数宣言</p>
+        <pre><code class="language-csharp line-numbers">
+using System;
+
+class Program
+{
+    // C#のエントリポイント（プログラムの開始点）
+    static void Main(string[] args)
+    {
+        // 宣言のみ
+        int number; 
+
+        // 値の代入 (初期化)
+        number = 100; 
+        
+        // 代入された値の確認
+        Console.WriteLine($"number の値: {number}");
+
+        // 宣言と同時に初期化
+        string message = "Hello, C#!";
+        
+        // 初期化された値の確認
+        Console.WriteLine($"message の値: {message}");
+        
+        // その他の型の例
+        double pi = 3.14159;
+        bool isTrue = true;
+        
+        Console.WriteLine($"pi の値: {pi}");
+        Console.WriteLine($"isTrue の値: {isTrue}");
+    }
+}
+    </code></pre>
+      </div>
+      <p>
+        コーディングでのプログラミングにおいて、変数はよく、箱に例えられることが多いです。<br/>
+        <span class="highlight">箱の中に数値や文字、記号など、様々なものを出し入れするようなイメージ</span>をもつと良いと思います。<br/>
+        <a href="https://cs.academy.wingarc.com/c00040-variable">詳しくはこちら</a>
+      </p>
+
+      <h3>変数の型の種類</h3>
+      <p>代表的な変数の型を表形式にまとめます。</p>
+      <table>
+        <tr id="title">
+          <th>型の名前</th>
+          <th>意味</th>
+        </tr>
+        <tr>
+          <td>int型</td>
+          <td>数値（主に整数）を扱う。</td>
+        </tr>
+        <tr>
+          <td>char型</td>
+          <td>
+            単体では、1バイトの文字列を扱う。<br />[]内に数値をいれると複数の文字列を扱える。
+          </td>
+        </tr>
+        <tr>
+          <td>floot型,<br />double型</td>
+          <td>小数を扱う。</td>
+        </tr>
+        <tr>
+          <td>bool型</td>
+          <td>真偽値（true/false）を扱う</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
