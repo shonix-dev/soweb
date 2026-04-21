@@ -38,6 +38,9 @@
         <p class="subtext">
           このような HTML は、JavaScript から見ると「body の中に h1 と p がある構造」として扱われます。
         </p>
+        <div class="note">
+          最初は DOM を「画面そのもの」ではなく、「画面を作るための設計図を JavaScript で触れる形にしたもの」と考えると整理しやすいです。
+        </div>
       </section>
 
       <section class="section-card">
@@ -50,6 +53,9 @@
         </ul>
         <pre class="example"><code class="language-javascript">const title = document.querySelector("h1");
 title.textContent = "新しいタイトル";</code></pre>
+        <p class="subtext">
+          `document.querySelector("h1")` で要素を見つけて、`textContent` で中の文字を変えています。
+        </p>
       </section>
 
       <section class="section-card">

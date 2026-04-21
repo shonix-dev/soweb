@@ -3,45 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="table.css" rel="stylesheet" />
-
-    <!-- Google Fonts -->
+    <title>C / C++ / C# 学習トピック</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Prism.js（シンタックスハイライト） -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
-
-    <title>C/C++/C#のお部屋</title>
+    <link href="table.css" rel="stylesheet" />
   </head>
-
   <body>
-    <div class="title">
-      <h1>C/C++/C#のお部屋</h1>
-    </div>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Learning Map</p>
+        <h1>C言語 / C++ / C# の学習トピック</h1>
+        <p class="lead">
+          3つの言語を横並びで見比べながら、どこが共通していて、どこから発展していくのかをつかめるように整理しました。
+        </p>
+      </section>
 
-    <div class="table">
-      <ul>
-        <li><a href="Cprogmam-basic.html">プログラミングの基礎</a></li>
-        <li><a href="input.html">変数と標準入出力</a></li>
-        <li>比較演算と条件分岐</li>
-        <li>繰り返し文</li>
-        <li>配列</li>
-        <li><a href="c-sharp.html">C#の基礎</a></li>
-      </ul>
-    </div>
-    <footer>
-      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
-    </footer>
+      <section class="card-grid" aria-label="言語ごとの概要">
+        <article class="topic-card c-lang">
+          <span class="chip">C言語</span>
+          <h2>基礎力を育てる</h2>
+          <p>
+            変数、入出力、条件分岐、繰り返しなど、プログラミングの土台をまっすぐ学ぶのに向いています。
+          </p>
+        </article>
+
+        <article class="topic-card cpp-lang">
+          <span class="chip">C++</span>
+          <h2>Cの理解を広げる</h2>
+          <p>
+            C言語の基礎を踏まえつつ、より大きなプログラム設計に進むための入口として整理できます。
+          </p>
+        </article>
+
+        <article class="topic-card csharp-lang">
+          <span class="chip">C#</span>
+          <h2>アプリ開発へつなげる</h2>
+          <p>
+            開発環境の準備から、クラスや継承まで含めて、実践的な学習の流れが見える構成です。
+          </p>
+        </article>
+      </section>
+
+      <section class="table-section">
+        <div class="section-heading">
+          <p class="section-label">Topic Table</p>
+          <h2>3言語の比較表</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>C言語</th>
+                <th>C++</th>
+                <th>C#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="Cprogmam-basic.html">プログラミングの基礎</a></td>
+                <td><a href="Cprogmam-basic.html">プログラミングの基礎</a></td>
+                <td><a href="c-sharp.html">C#の基礎</a></td>
+              </tr>
+              <tr>
+                <td><a href="Cprogmam-basic.html">main関数</a></td>
+                <td><a href="Cprogmam-basic.html">main関数</a></td>
+                <td><a href="Cprogmam-basic.html">Mainメソッド</a></td>
+              </tr>
+              <tr>
+                <td><a href="input.html">変数</a></td>
+                <td><a href="input.html">変数</a></td>
+                <td><a href="c-sharp.html">変数</a></td>
+              </tr>
+              <tr>
+                <td><a href="input.html">変数の型</a></td>
+                <td><a href="input.html">変数の型</a></td>
+                <td><a href="c-sharp.html">変数の型</a></td>
+              </tr>
+              <tr>
+                <td><a href="input.html">標準入出力</a></td>
+                <td>標準入出力</td>
+                <td><a href="c-sharp.html">標準入出力</a></td>
+              </tr>
+              <tr>
+                <td>比較演算と条件分岐</td>
+                <td>比較演算と条件分岐</td>
+                <td><a href="c-sharp.html">条件分岐と繰り返し</a></td>
+              </tr>
+              <tr>
+                <td>繰り返し文</td>
+                <td>繰り返し文</td>
+                <td><a href="c-sharp.html">配列</a></td>
+              </tr>
+              <tr>
+                <td>配列</td>
+                <td>配列</td>
+                <td><a href="c-sharp.html">辞書型・構造体</a></td>
+              </tr>
+              <tr>
+                <td class="empty">-</td>
+                <td class="empty">-</td>
+                <td><a href="c-sharp.html">クラス・継承・ポリモーフィズム</a></td>
+              </tr>
+              <tr>
+                <td class="empty">-</td>
+                <td class="empty">-</td>
+                <td><a href="c-sharp.html">Visual Studio Code のインストール</a></td>
+              </tr>
+              <tr>
+                <td class="empty">-</td>
+                <td class="empty">-</td>
+                <td><a href="c-sharp.html">C#を動かせるようにする</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="note-box">
+        <h2>学習の見方</h2>
+        <p>
+          C言語とC++は基礎トピックがかなり共通しています。一方でC#は、環境構築やオブジェクト指向の学習項目が早い段階から入ってくるのが特徴です。
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
+      </footer>
+    </main>
   </body>
 </html>

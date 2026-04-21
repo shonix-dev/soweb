@@ -36,6 +36,11 @@
 button.addEventListener("click", function () {
   console.log("ボタンが押されました");
 });</code></pre>
+        <ul class="point-list">
+          <li>`button` はイベントを付ける対象です</li>
+          <li>`"click"` は何が起きたら動くかを表します</li>
+          <li>`function () { ... }` の中が実際に行う処理です</li>
+        </ul>
       </section>
 
       <section class="section-card">
@@ -62,6 +67,9 @@ const message = document.querySelector("#message");
 button.addEventListener("click", function () {
   message.textContent = "ボタンが押されました";
 });</code></pre>
+        <p class="subtext">
+          「クリック」という出来事をきっかけに、`message` の文字を書き換えています。
+        </p>
       </section>
 
       <section class="section-card">

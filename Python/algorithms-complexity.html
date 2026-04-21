@@ -28,6 +28,10 @@
 
       <section class="section-card">
         <div class="title"><h2>線形探索の例</h2></div>
+        <p>
+          線形探索は、先頭から順番に1つずつ探す方法です。
+          人名一覧を上から見ていって、目的の名前を探すイメージに近いです。
+        </p>
         <pre class="example"><code class="language-python">def linear_search(items, target):
     for index, item in enumerate(items):
         if item == target:
@@ -46,6 +50,10 @@
 
       <section class="section-card">
         <div class="title"><h2>計算量の見方</h2></div>
+        <p>
+          計算量は「データが増えたとき、処理の大変さがどう増えるか」を表す目安です。
+          最初は正確な式よりも、増え方の違いをざっくり比べられれば十分です。
+        </p>
         <ul class="point-list">
           <li>`O(1)`: 一定時間</li>
           <li>`O(n)`: データ数に比例</li>
@@ -54,6 +62,9 @@
         <pre class="example"><code class="language-python">for a in items:
     for b in items:
         print(a, b)</code></pre>
+        <div class="note">
+          `O(n^2)` はデータが少ないうちは問題なくても、件数が大きくなると急に重くなりやすい考え方です。
+        </div>
       </section>
 
       <section class="section-card">

@@ -28,7 +28,11 @@
 
       <section class="section-card">
         <div class="title"><h2>クラスの基本</h2></div>
-        <p>クラスから作られた具体的な実体をオブジェクトと呼びます。`__init__` では初期値を設定します。</p>
+        <p>
+          クラスから作られた具体的な実体をオブジェクトと呼びます。
+          最初は「同じ形のデータを何回も使いたいときの設計図」と考えると分かりやすいです。
+          `__init__` はオブジェクトを作るときに最初の値を入れる場所です。
+        </p>
         <pre class="example"><code class="language-python">class Student:
     def __init__(self, name, grade):
         self.name = name
@@ -40,11 +44,17 @@
 
 student1 = Student("Soshi", 2)
 student1.introduce()</code></pre>
+        <p class="subtext">
+          `Student("Soshi", 2)` のように書くと、`name` と `grade` を持つ1人分のデータが作られます。
+        </p>
       </section>
 
       <section class="section-card">
         <div class="title"><h2>属性とメソッド</h2></div>
-        <p>オブジェクトが持つデータを属性、オブジェクトに対して行う処理をメソッドと呼びます。`self` はそのオブジェクト自身を表します。</p>
+        <p>
+          オブジェクトが持つデータを属性、オブジェクトに対して行う処理をメソッドと呼びます。
+          `self` は「今操作しているそのデータ自身」を指しています。
+        </p>
         <pre class="example"><code class="language-python">class Book:
     def __init__(self, title):
         self.title = title
@@ -58,6 +68,11 @@ book = Book("Python入門")
 book.borrow()
 print(book.title)
 print(book.is_borrowed)</code></pre>
+        <ul class="point-list">
+          <li>`self.title` は本の名前というデータです</li>
+          <li>`borrow()` は本の状態を変える動きです</li>
+          <li>「データ」と「そのデータに関する操作」を近くに置けるのがクラスの良さです</li>
+        </ul>
       </section>
 
       <section class="section-card">
@@ -89,6 +104,10 @@ print(account.balance)</code></pre>
           <li>関数だけでは整理しづらい場面でクラスを試す</li>
           <li>いきなり継承まで広げず、小さな設計から始める</li>
         </ul>
+        <div class="note">
+          最初の段階では、クラスを「難しい仕組み」と考えすぎなくて大丈夫です。
+          生徒、商品、本のように、似た情報をまとめたい場面で使う箱だと思うと理解しやすくなります。
+        </div>
       </section>
     </main>
     <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>

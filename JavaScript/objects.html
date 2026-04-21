@@ -27,6 +27,10 @@
 
       <section class="section-card">
         <div class="title"><h2>基本</h2></div>
+        <p>
+          オブジェクトは、1つのものに関する情報をまとめるための入れ物です。
+          たとえば「生徒」なら、名前、学年、部活のように複数の情報を1つにできます。
+        </p>
         <pre class="example"><code class="language-javascript">const student = {
   name: "Soshi",
   grade: 2,
@@ -35,6 +39,9 @@
 
 console.log(student.name);
 console.log(student["grade"]);</code></pre>
+        <p class="subtext">
+          `student.name` は「student の中の name を取り出す」という意味です。
+        </p>
       </section>
 
       <section class="section-card">
@@ -42,6 +49,11 @@ console.log(student["grade"]);</code></pre>
         <pre class="example"><code class="language-javascript">student.score = 90;
 console.log(student);</code></pre>
         <p class="subtext">配列が順番で管理するのに対して、オブジェクトは名前で管理します。</p>
+        <ul class="point-list">
+          <li>配列は「何番目か」で取り出すことが多いです</li>
+          <li>オブジェクトは「name」や「price」のような名前で取り出します</li>
+          <li>データの意味が分かりやすいので、実際のWeb開発でもよく使われます</li>
+        </ul>
       </section>
 
       <section class="section-card">

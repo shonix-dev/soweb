@@ -28,6 +28,10 @@
 
       <section class="section-card">
         <div class="title"><h2>基本の流れ</h2></div>
+        <p>
+          APIは、プログラムどうしが決まったルールでやり取りする仕組みです。
+          最初は「URLにお願いを送って、返ってきたデータを使う」とイメージするとつかみやすいです。
+        </p>
         <ul class="point-list">
           <li>URLにリクエストを送る</li>
           <li>レスポンスを受け取る</li>
@@ -41,6 +45,9 @@ response = requests.get(url, timeout=10)
 if response.status_code == 200:
     data = response.json()
     print(data)</code></pre>
+        <p class="subtext">
+          `requests.get()` が「取りに行く処理」、`response.json()` が「受け取った内容をPythonで使いやすい形にする処理」です。
+        </p>
       </section>
 
       <section class="section-card">
@@ -52,6 +59,9 @@ response = requests.post(
     json=payload,
     timeout=10,
 )</code></pre>
+        <p class="subtext">
+          `payload` に送信したいデータをまとめ、`json=payload` としてAPIに渡しています。
+        </p>
       </section>
 
       <section class="section-card">
@@ -62,11 +72,19 @@ response = requests.post(
           <li>認証: APIキーやトークン</li>
         </ul>
         <div class="note">実際にAPIを使うときは、公式ドキュメントで利用条件や認証方法を確認します。</div>
+        <h3 class="mini-heading">初学者向けの見方</h3>
         <ul class="point-list">
           <li>まずは `GET` で取得して `json()` を読むところから覚える</li>
           <li>通信失敗時の処理も考える</li>
           <li>認証情報はコードに直接書かず、環境変数などで管理するのが安全です</li>
         </ul>
+        <pre class="example"><code class="language-python">if response.status_code == 200:
+    print("成功")
+else:
+    print("失敗", response.status_code)</code></pre>
+        <p class="subtext">
+          最初は「成功したか」「失敗したか」を表示できるだけでも十分です。少しずつ例外処理や認証へ広げていきましょう。
+        </p>
       </section>
     </main>
     <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
