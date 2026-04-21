@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>クラスとオブジェクト指向 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>クラスとオブジェクト指向</h1></div>
+      <p class="lead">
+        クラスは、データと処理をひとまとめにする設計図です。似た性質を持つものを整理して扱いたいときに役立ちます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>クラスの基本</h2></div>
+        <p>クラスから作られた具体的な実体をオブジェクトと呼びます。`__init__` では初期値を設定します。</p>
+        <pre class="example"><code class="language-python">class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def introduce(self):
+        print(f"{self.name}です。{self.grade}年生です。")
+
+
+student1 = Student("Soshi", 2)
+student1.introduce()</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>属性とメソッド</h2></div>
+        <p>オブジェクトが持つデータを属性、オブジェクトに対して行う処理をメソッドと呼びます。`self` はそのオブジェクト自身を表します。</p>
+        <pre class="example"><code class="language-python">class Book:
+    def __init__(self, title):
+        self.title = title
+        self.is_borrowed = False
+
+    def borrow(self):
+        self.is_borrowed = True
+
+
+book = Book("Python入門")
+book.borrow()
+print(book.title)
+print(book.is_borrowed)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>オブジェクト指向の考え方</h2></div>
+        <ul class="point-list">
+          <li>データとそれを扱う処理を近くに置ける</li>
+          <li>似た機能を持つものをまとめやすい</li>
+          <li>大きなプログラムを役割ごとに分けやすい</li>
+        </ul>
+        <pre class="example"><code class="language-python">class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+
+account = BankAccount("Soshi")
+account.deposit(5000)
+print(account.balance)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学び始めのポイント</h2></div>
+        <p>最初は「関連するデータと関数を1つにまとめる」感覚で十分です。無理に複雑な設計を覚えるより、小さな例で慣れるのがおすすめです。</p>
+        <ul class="point-list">
+          <li>まずは `__init__` とインスタンス生成に慣れる</li>
+          <li>関数だけでは整理しづらい場面でクラスを試す</li>
+          <li>いきなり継承まで広げず、小さな設計から始める</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

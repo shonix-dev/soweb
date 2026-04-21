@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>変数とデータ型 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title">
+        <h1>変数とデータ型</h1>
+      </div>
+      <p class="lead">
+        Pythonでは、値に名前を付けて保存するときに変数を使います。さらに、その値が整数なのか文字列なのかといった種類をデータ型と呼びます。
+      </p>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>基本</h2>
+        </div>
+        <p>
+          変数は「あとで使う値を入れておく箱」のようなものです。Pythonでは、変数名を書いて `=`
+          で値を代入するだけで使い始められます。
+        </p>
+        <ul class="point-list">
+          <li>変数は `=` を使って代入します。</li>
+          <li>Pythonでは型を書く必要はなく、代入した値から自動で判断されます。</li>
+          <li>よく使う型は `int`、`float`、`str`、`bool` です。</li>
+        </ul>
+        <pre class="example"><code class="language-python">name = "Soshi"
+age = 20
+height = 170.5
+is_student = True
+
+print(name)
+print(age)
+print(type(height))</code></pre>
+        <p class="subtext">
+          `type()` を使うと、その値がどのデータ型なのか確認できます。
+        </p>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>主なデータ型</h2>
+        </div>
+        <p>型が違うと、できる操作も変わります。数値なら計算、文字列なら文字の結合が代表例です。</p>
+        <ul class="point-list">
+          <li>`int`: 整数</li>
+          <li>`float`: 小数</li>
+          <li>`str`: 文字列</li>
+          <li>`bool`: `True` か `False`</li>
+        </ul>
+        <div class="note">
+          数値の `10` と文字列の `"10"` は別物です。見た目が似ていても、計算できるかどうかが変わります。
+        </div>
+        <pre class="example"><code class="language-python">print(10 + 5)      # 15
+print("10" + "5")  # 105</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>型変換</h2>
+        </div>
+        <p>
+          `input()` で受け取った値は文字列になるため、計算に使う前に整数へ変換する場面がよくあります。
+        </p>
+        <pre class="example"><code class="language-python">text_number = "25"
+number = int(text_number)
+
+print(number + 5)   # 30
+print(str(number))  # "25"</code></pre>
+        <h3 class="mini-heading">学習のポイント</h3>
+        <ul class="point-list">
+          <li>変数名は役割が伝わる名前にすると読みやすくなります。</li>
+          <li>型の違いを意識すると、エラーの原因を見つけやすくなります。</li>
+          <li>まずは `print()` と `type()` を使って確認しながら学ぶのがおすすめです。</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>変数を使う場面</h2>
+        </div>
+        <p>
+          変数は、入力された値や途中計算の結果を一時的に保存するときに使います。何度も使う値に名前を付けることで、
+          コードの意味が分かりやすくなります。
+        </p>
+        <pre class="example"><code class="language-python">price = 1200
+tax_rate = 0.1
+total = price * (1 + tax_rate)
+
+print(total)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>つまずきやすい点</h2>
+        </div>
+        <ul class="point-list">
+          <li>`score` と `Score` は別の変数です。</li>
+          <li>文字列と数値をそのまま足そうとするとエラーになります。</li>
+          <li>意味のない短い変数名ばかりだと、あとで読み返しにくくなります。</li>
+        </ul>
+        <pre class="example"><code class="language-python">age = "20"
+
+# print(age + 1)  # エラーになる
+print(int(age) + 1)</code></pre>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

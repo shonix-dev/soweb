@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>演算子 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>演算子</h1></div>
+      <p class="lead">
+        演算子は、計算や比較、条件の組み合わせを行うための記号です。数値計算だけでなく、条件分岐でもよく使います。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>算術演算子</h2></div>
+        <pre class="example"><code class="language-javascript">const a = 10;
+const b = 3;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>比較と論理演算子</h2></div>
+        <ul class="point-list">
+          <li>`===`, `!==`: 厳密な比較</li>
+          <li>`>`, `<`, `>=`, `<=`: 大小比較</li>
+          <li>`&&`, `||`, `!`: 条件の組み合わせ</li>
+        </ul>
+        <pre class="example"><code class="language-javascript">const age = 19;
+const hasId = true;
+
+console.log(age >= 18 && hasId);
+console.log(age === 19);
+console.log(!hasId);</code></pre>
+        <p class="subtext">JavaScriptでは `==` より `===` を使う方が安全です。</p>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>代入演算子</h2></div>
+        <p>変数に値を入れたり、今の値をもとに更新したりするときに使います。</p>
+        <pre class="example"><code class="language-javascript">let count = 0;
+
+count += 1;
+count += 2;
+
+console.log(count);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>計算用と比較用の演算子を区別する</li>
+          <li>条件分岐では `===` を優先する</li>
+          <li>複数条件は `&&` と `||` を使って組み合わせる</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

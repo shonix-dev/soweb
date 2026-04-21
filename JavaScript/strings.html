@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>文字列操作 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>文字列操作</h1></div>
+      <p class="lead">
+        文字列は、名前やメッセージなどを扱うための型です。つなげたり、一部分を取り出したり、形を整えたりできます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>基本操作</h2></div>
+        <pre class="example"><code class="language-javascript">const firstName = "Soshi";
+const lastName = "Oniki";
+
+const fullName = firstName + " " + lastName;
+console.log(fullName);
+console.log(fullName.length);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>テンプレートリテラル</h2></div>
+        <pre class="example"><code class="language-javascript">const name = "Soshi";
+const score = 92;
+
+console.log(`${name}さんの点数は${score}点です`);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>便利なメソッド</h2></div>
+        <pre class="example"><code class="language-javascript">const text = "  javascript basic  ";
+
+console.log(text.trim());
+console.log(text.toUpperCase());
+console.log(text.replace("basic", "lesson"));</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>部分文字列の取り出し</h2></div>
+        <p>文字列の一部だけを取り出したいときは `slice()` などを使います。</p>
+        <pre class="example"><code class="language-javascript">const text = "JavaScript";
+
+console.log(text[0]);
+console.log(text.slice(0, 4));
+console.log(text.slice(-6));</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>文字列も順番のあるデータとして扱えます</li>
+          <li>連結、長さ確認、置換の3つは特によく使います</li>
+          <li>画面表示やフォーム入力で頻繁に登場します</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

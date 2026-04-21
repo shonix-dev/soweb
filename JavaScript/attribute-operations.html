@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>属性の取得と変更 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>属性の取得と変更</h1></div>
+      <p class="lead">
+        HTML要素には `src`、`href`、`alt`、`value` などの属性があります。JavaScript から属性を読み取ったり、書き換えたりできます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>getAttribute と setAttribute</h2></div>
+        <pre class="example"><code class="language-javascript">const link = document.querySelector("a");
+
+console.log(link.getAttribute("href"));
+link.setAttribute("href", "https://example.com");</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>プロパティで扱う例</h2></div>
+        <p>よく使う属性は、直接プロパティとして扱えることもあります。</p>
+        <pre class="example"><code class="language-javascript">const image = document.querySelector("img");
+
+image.src = "photo.jpg";
+image.alt = "風景の写真";</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>使う場面</h2></div>
+        <p>
+          画像の切り替え、リンク先の変更、入力欄への初期値設定などで属性操作が使われます。
+        </p>
+        <pre class="example"><code class="language-javascript">const link = document.querySelector("#profile-link");
+
+link.href = "https://example.com/profile";
+link.textContent = "プロフィールを見る";</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>リンク先や画像の差し替えでよく使います</li>
+          <li>`getAttribute()` は属性値の確認に便利です</li>
+          <li>フォームでは `value` のようなプロパティも頻繁に使います</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

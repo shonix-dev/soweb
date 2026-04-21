@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>Webスクレイピング | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>Webスクレイピング</h1></div>
+      <p class="lead">
+        Webスクレイピングは、Webページから情報を取り出す技術です。調査や一覧取得に便利ですが、サイトの利用規約や負荷への配慮が必要です。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>基本例</h2></div>
+        <pre class="example"><code class="language-python">import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+html = requests.get(url, timeout=10).text
+soup = BeautifulSoup(html, "html.parser")
+
+title = soup.find("h1")
+print(title.text)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>複数要素を取る例</h2></div>
+        <p>一覧ページでは、同じ種類の要素をまとめて取り出すことがよくあります。</p>
+        <pre class="example"><code class="language-python">items = soup.find_all("li")
+
+for item in items:
+    print(item.text.strip())</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>注意点</h2></div>
+        <ul class="point-list">
+          <li>`robots.txt` や利用規約を確認する</li>
+          <li>短時間に大量アクセスしない</li>
+          <li>ページ構造が変わるとコードも修正が必要です</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>APIとの違い</h2></div>
+        <p>APIがあるならAPIを優先し、ない場合にページから情報を取得するのが一般的です。スクレイピングはHTML構造への依存が大きい点に注意します。</p>
+        <p>
+          HTML構造が変わると取得結果が崩れることもあるので、定期実行する場合は失敗時に気付けるようログや確認処理を入れると安心です。
+        </p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

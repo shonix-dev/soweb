@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>DOMとは | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>DOMとは</h1></div>
+      <p class="lead">
+        DOM は、HTML を JavaScript から扱いやすくするための仕組みです。JavaScript は DOM を通して、見出しやボタンや入力欄などを取得し、内容を変えたり反応を付けたりできます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>DOMの考え方</h2></div>
+        <p>
+          ブラウザは HTML をそのまま読むのではなく、要素の親子関係を持ったデータとして扱います。
+          その構造を JavaScript から操作できるようにしたものが DOM です。
+        </p>
+        <pre class="example"><code class="language-html">&lt;body&gt;
+  &lt;h1&gt;タイトル&lt;/h1&gt;
+  &lt;p&gt;説明文&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+        <p class="subtext">
+          このような HTML は、JavaScript から見ると「body の中に h1 と p がある構造」として扱われます。
+        </p>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>DOMでできること</h2></div>
+        <ul class="point-list">
+          <li>要素を取得する</li>
+          <li>文字を変える</li>
+          <li>CSSクラスを付け替える</li>
+          <li>クリック時の動きを追加する</li>
+        </ul>
+        <pre class="example"><code class="language-javascript">const title = document.querySelector("h1");
+title.textContent = "新しいタイトル";</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>DOMを使う場面</h2></div>
+        <p>
+          DOM は、ボタンを押したときに文字を変える、メニューを開閉する、入力結果を画面に表示するなど、
+          Webページに動きを付ける場面で広く使われます。
+        </p>
+        <pre class="example"><code class="language-javascript">const message = document.querySelector("#message");
+
+message.textContent = "読み込みが完了しました";</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>`document` はページ全体を表す入口です</li>
+          <li>まずは「要素を取得して文字を書き換える」流れを覚えると理解しやすいです</li>
+          <li>DOM操作は Webページに動きを付ける基礎になります</li>
+        </ul>
+        <div class="note">
+          JavaScriptだけで画面を変えているように見えても、実際には DOM の中の要素を変更していると考えると整理しやすいです。
+        </div>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

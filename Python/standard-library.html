@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>標準ライブラリ活用 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>標準ライブラリ活用</h1></div>
+      <p class="lead">
+        Pythonには最初から便利なライブラリがたくさん入っています。外部ライブラリを増やさなくても、日付処理やファイル操作などをかなりこなせます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>よく使う標準ライブラリ</h2></div>
+        <ul class="point-list">
+          <li>`datetime`: 日付と時刻</li>
+          <li>`pathlib`: パスやファイル操作</li>
+          <li>`random`: 乱数</li>
+          <li>`math`: 数学関数</li>
+        </ul>
+        <pre class="example"><code class="language-python">from datetime import datetime
+from pathlib import Path
+import random
+
+now = datetime.now()
+print(now.strftime("%Y-%m-%d"))
+
+path = Path("sample.txt")
+print(path.exists())
+
+print(random.randint(1, 6))</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>ほかにも便利なもの</h2></div>
+        <ul class="point-list">
+          <li>`collections`: 数え上げや便利なデータ構造</li>
+          <li>`itertools`: 繰り返し処理の補助</li>
+          <li>`os`: 環境変数やディレクトリ操作</li>
+          <li>`sys`: 実行引数やPython環境の取得</li>
+        </ul>
+        <pre class="example"><code class="language-python">from collections import Counter
+
+words = ["python", "web", "python", "data"]
+count = Counter(words)
+print(count)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>活用の考え方</h2></div>
+        <p>「まず標準ライブラリでできないか」を考えると、依存関係を増やしすぎずに済みます。学習初期にも扱いやすいです。</p>
+        <p>
+          外部ライブラリを入れる前に、標準ライブラリに似た機能がないか調べる習慣を持つと、環境構築もシンプルになります。
+        </p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

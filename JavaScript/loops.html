@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>ループ | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>ループ</h1></div>
+      <p class="lead">
+        ループは、同じ処理を繰り返すための仕組みです。JavaScriptでは `for` と `while` が基本です。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>for文</h2></div>
+        <pre class="example"><code class="language-javascript">for (let i = 0; i < 5; i += 1) {
+  console.log(i);
+}</code></pre>
+        <p class="subtext">回数が決まっている繰り返しに向いています。</p>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>配列との組み合わせ</h2></div>
+        <pre class="example"><code class="language-javascript">const fruits = ["apple", "banana", "orange"];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>while文</h2></div>
+        <pre class="example"><code class="language-javascript">let count = 0;
+
+while (count < 3) {
+  console.log(count);
+  count += 1;
+}</code></pre>
+        <div class="note">終了条件を更新しないと無限ループになるので注意します。</div>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>ループと条件分岐の組み合わせ</h2></div>
+        <p>繰り返しながら条件で絞り込む処理は、一覧表示や集計でよく使います。</p>
+        <pre class="example"><code class="language-javascript">const numbers = [3, 8, 12, 15, 20];
+
+for (const number of numbers) {
+  if (number % 2 === 0) {
+    console.log(number);
+  }
+}</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>`for` は回数が決まっているときに使いやすい</li>
+          <li>`for...of` は配列の中身を順番に扱うときに便利です</li>
+          <li>`while` は終了条件の更新忘れに注意します</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

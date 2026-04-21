@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>テスト入門 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>テスト入門</h1></div>
+      <p class="lead">
+        テストは、プログラムが期待どおり動くかを確認するための仕組みです。手で毎回確認するより、コードとして残すことで再利用できます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>unittest の基本</h2></div>
+        <pre class="example"><code class="language-python">import unittest
+
+def add(a, b):
+    return a + b
+
+class TestAdd(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+
+
+if __name__ == "__main__":
+    unittest.main()</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>何をテストするか</h2></div>
+        <p>まずは、入力に対して出力が決まる小さな関数から始めると分かりやすいです。</p>
+        <ul class="point-list">
+          <li>正常系の入力</li>
+          <li>境界値の入力</li>
+          <li>想定外入力に対する振る舞い</li>
+        </ul>
+        <pre class="example"><code class="language-python">def is_adult(age):
+    return age >= 18
+
+
+class TestAge(unittest.TestCase):
+    def test_is_adult(self):
+        self.assertTrue(is_adult(18))
+        self.assertFalse(is_adult(17))</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>テストを書くメリット</h2></div>
+        <ul class="point-list">
+          <li>修正後の動作確認がしやすい</li>
+          <li>不具合の再発を防ぎやすい</li>
+          <li>仕様の理解をコードで残せる</li>
+        </ul>
+        <p>手動確認だけに頼るより、あとからの機能追加やリファクタリングにも強くなります。</p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

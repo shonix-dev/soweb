@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>要素の取得 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>要素の取得</h1></div>
+      <p class="lead">
+        DOM操作の最初の一歩は、HTML要素を取得することです。取得した要素に対して、文字の変更やイベント追加を行います。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>querySelector</h2></div>
+        <p>
+          `querySelector()` は、CSSセレクタの書き方で要素を1つ取得できます。最初に覚える方法としてとても便利です。
+        </p>
+        <pre class="example"><code class="language-javascript">const title = document.querySelector("h1");
+const button = document.querySelector(".save-button");
+const input = document.querySelector("#user-name");</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>複数要素の取得</h2></div>
+        <p>`querySelectorAll()` を使うと、条件に合う複数要素をまとめて取得できます。</p>
+        <pre class="example"><code class="language-javascript">const items = document.querySelectorAll("li");
+
+for (const item of items) {
+  console.log(item.textContent);
+}</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>よくある取得パターン</h2></div>
+        <ul class="point-list">
+          <li>`#id名`: 特定の1つを選ぶ</li>
+          <li>`.class名`: 同じ種類の要素を選ぶ</li>
+          <li>`タグ名`: `p` や `button` など要素名で選ぶ</li>
+        </ul>
+        <pre class="example"><code class="language-javascript">const title = document.querySelector("#page-title");
+const cards = document.querySelectorAll(".card");
+const button = document.querySelector("button");</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>まずは `querySelector()` と `querySelectorAll()` を使えるようにすると実用的です</li>
+          <li>取得したい要素に `id` や `class` を付けると選びやすくなります</li>
+          <li>要素が見つからないと `null` になるので、必要に応じて確認します</li>
+        </ul>
+        <pre class="example"><code class="language-javascript">const button = document.querySelector("#save-button");
+
+if (button) {
+  console.log("ボタンが見つかりました");
+}</code></pre>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

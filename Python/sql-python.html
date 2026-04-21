@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>SQL と Python | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>SQL と Python</h1></div>
+      <p class="lead">
+        Pythonからデータベースを扱うと、保存・検索・更新の処理を自動化できます。学習では標準ライブラリの `sqlite3` が始めやすいです。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>sqlite3 の基本</h2></div>
+        <pre class="example"><code class="language-python">import sqlite3
+
+conn = sqlite3.connect("school.db")
+cursor = conn.cursor()
+
+cursor.execute("CREATE TABLE IF NOT EXISTS students (name TEXT, grade INTEGER)")
+cursor.execute("INSERT INTO students VALUES (?, ?)", ("Soshi", 2))
+conn.commit()</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>データ取得</h2></div>
+        <pre class="example"><code class="language-python">cursor.execute("SELECT name, grade FROM students")
+rows = cursor.fetchall()
+
+for row in rows:
+    print(row)</code></pre>
+        <div class="note">SQL文を文字列結合で作るより、プレースホルダ `?` を使う方が安全です。</div>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>よくある操作</h2></div>
+        <ul class="point-list">
+          <li>`INSERT`: データを追加する</li>
+          <li>`SELECT`: データを取得する</li>
+          <li>`UPDATE`: データを更新する</li>
+          <li>`DELETE`: データを削除する</li>
+        </ul>
+        <pre class="example"><code class="language-python">cursor.execute(
+    "UPDATE students SET grade = ? WHERE name = ?",
+    (3, "Soshi"),
+)
+conn.commit()</code></pre>
+        <p>Pythonは処理全体を制御し、SQLはデータの検索や更新条件を表す役割だと考えると整理しやすいです。</p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

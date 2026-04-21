@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>関数 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title">
+        <h1>関数</h1>
+      </div>
+      <p class="lead">
+        関数は、同じ処理をひとまとまりにして名前を付けたものです。再利用しやすくなり、コードも読みやすくなります。
+      </p>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>関数の定義</h2>
+        </div>
+        <p>
+          関数を使うと、同じ処理を何度も書かずに済みます。処理に名前を付けることで、プログラムの意味も読み取りやすくなります。
+        </p>
+        <pre class="example"><code class="language-python">def greet(name):
+    print(f"こんにちは、{name}さん")
+
+greet("Soshi")</code></pre>
+        <ul class="point-list">
+          <li>`def` で関数を定義します。</li>
+          <li>かっこの中に引数を書きます。</li>
+          <li>必要なら `return` で値を返せます。</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>戻り値</h2>
+        </div>
+        <pre class="example"><code class="language-python">def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)</code></pre>
+        <div class="note">
+          `print` は表示するだけですが、`return` は関数の結果を外へ返します。
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>関数を使うメリット</h2>
+        </div>
+        <ul class="point-list">
+          <li>同じ処理をまとめられる</li>
+          <li>あとから修正しやすい</li>
+          <li>プログラムを部品ごとに考えられる</li>
+        </ul>
+        <pre class="example"><code class="language-python">def calculate_price(price, tax_rate):
+    return int(price * (1 + tax_rate))
+
+print(calculate_price(1000, 0.1))</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>引数の役割</h2>
+        </div>
+        <p>
+          引数を使うと、同じ処理でも渡す値によって結果を変えられます。関数をより柔軟に再利用できるようになります。
+        </p>
+        <pre class="example"><code class="language-python">def introduce(name, hobby):
+    print(f"{name}さんの趣味は{hobby}です")
+
+introduce("Soshi", "読書")
+introduce("Aki", "サッカー")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>学習のポイント</h2>
+        </div>
+        <ul class="point-list">
+          <li>1つの関数に役割を詰め込みすぎない</li>
+          <li>名前から何をする関数か想像できるようにする</li>
+          <li>同じコードを2回以上書きそうなら関数化を考える</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

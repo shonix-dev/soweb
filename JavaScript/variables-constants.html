@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>変数と定数 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>変数と定数</h1></div>
+      <p class="lead">
+        JavaScriptでは、データを一時的に保存するために変数や定数を使います。値に名前を付けることで、処理の意味が分かりやすくなります。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>基本の書き方</h2></div>
+        <p>`let` はあとで値を変えられる変数、`const` は再代入しない値に使います。</p>
+        <pre class="example"><code class="language-javascript">let score = 80;
+const userName = "Soshi";
+
+score = 90;
+
+console.log(score);
+console.log(userName);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>使い分け</h2></div>
+        <ul class="point-list">
+          <li>値が変わるなら `let`</li>
+          <li>基本は `const` を優先すると意図が分かりやすい</li>
+          <li>`var` は古い書き方なので、学習初期は `let` と `const` を中心に覚えると十分です</li>
+        </ul>
+        <pre class="example"><code class="language-javascript">const taxRate = 0.1;
+let price = 1200;
+
+price = price * (1 + taxRate);
+console.log(price);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>使う場面</h2></div>
+        <p>
+          変数や定数は、入力された値、計算途中の結果、設定値などを保存するときに使います。
+          値に名前を付けることで、コードを読んだときに意味が伝わりやすくなります。
+        </p>
+        <pre class="example"><code class="language-javascript">const itemName = "ノート";
+let quantity = 3;
+const pricePerItem = 120;
+
+const total = quantity * pricePerItem;
+console.log(`${itemName}の合計金額は${total}円です`);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>名前は役割が分かるものにする</li>
+          <li>再代入しないなら `const` を使う習慣を付ける</li>
+          <li>1文字だけの名前ばかりにしない</li>
+        </ul>
+        <div class="note">
+          `const` は「中身が絶対に変わらない」ではなく、「その変数名に別の値を再代入しない」という意味です。
+        </div>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

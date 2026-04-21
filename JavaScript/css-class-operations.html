@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>CSSクラスの操作 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>CSSクラスの操作</h1></div>
+      <p class="lead">
+        JavaScript から CSS クラスを付けたり外したりすると、見た目を動的に変えられます。表示・非表示や色の切り替えでよく使います。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>classList</h2></div>
+        <pre class="example"><code class="language-javascript">const box = document.querySelector(".box");
+
+box.classList.add("active");
+box.classList.remove("hidden");
+box.classList.toggle("open");</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>よくある使い方</h2></div>
+        <p>メニューの開閉やエラー表示などで、クラスの付け替えがよく使われます。</p>
+        <pre class="example"><code class="language-javascript">const menu = document.querySelector("#menu");
+
+function openMenu() {
+  menu.classList.add("is-open");
+}</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>状態の切り替え</h2></div>
+        <p>`toggle()` を使うと、同じボタンで表示と非表示を切り替えるような処理を書きやすくなります。</p>
+        <pre class="example"><code class="language-javascript">const panel = document.querySelector("#panel");
+const button = document.querySelector("#toggle-button");
+
+button.addEventListener("click", function () {
+  panel.classList.toggle("is-hidden");
+});</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>見た目の変更は CSS、切り替えのきっかけは JavaScript という役割分担が分かりやすいです</li>
+          <li>`toggle()` はオン・オフの切り替えに便利です</li>
+          <li>スタイルを直接変更するより、クラス操作の方が管理しやすいです</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

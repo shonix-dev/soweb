@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>ファイル入出力 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title">
+        <h1>ファイル入出力</h1>
+      </div>
+      <p class="lead">
+        ファイル入出力では、テキストファイルを読み込んだり、結果を保存したりできます。Pythonでは `with open(...)` を使う書き方が定番です。
+      </p>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>読み込み</h2>
+        </div>
+        <p>
+          読み込みでは、ファイルの内容をプログラムの中に取り込みます。テキストの確認、データの読み込み、ログの解析などで使います。
+        </p>
+        <pre class="example"><code class="language-python">with open("sample.txt", "r", encoding="utf-8") as file:
+    content = file.read()
+
+print(content)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>書き込み</h2>
+        </div>
+        <pre class="example"><code class="language-python">with open("result.txt", "w", encoding="utf-8") as file:
+    file.write("Pythonの学習記録です\n")
+    file.write("ファイルに文章を書けました")</code></pre>
+        <p class="subtext">
+          `w` は新しく書き直すモードなので、既存の内容を消して保存します。
+        </p>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>モードの違い</h2>
+        </div>
+        <ul class="point-list">
+          <li>`r`: 読み込み</li>
+          <li>`w`: 上書き保存</li>
+          <li>`a`: 追記</li>
+        </ul>
+        <div class="note">
+          `with` を使うと、処理が終わったあと自動でファイルが閉じられるので安全です。
+        </div>
+        <pre class="example"><code class="language-python">with open("log.txt", "a", encoding="utf-8") as file:
+    file.write("1行追加しました\n")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>行ごとに読み込む</h2>
+        </div>
+        <p>
+          長いファイルでは、一度に全部読むより1行ずつ扱う方が分かりやすいことがあります。
+        </p>
+        <pre class="example"><code class="language-python">with open("sample.txt", "r", encoding="utf-8") as file:
+    for line in file:
+        print(line.strip())</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>学習のポイント</h2>
+        </div>
+        <ul class="point-list">
+          <li>まずは `with open(...)` の形を覚えると実用的です。</li>
+          <li>文字化けを防ぐために `encoding="utf-8"` を意識すると安心です。</li>
+          <li>上書き保存の `w` は既存内容を消すので、最初は特に注意します。</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>データ型 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>データ型</h1></div>
+      <p class="lead">
+        データ型は、その値がどんな性質を持つかを表します。JavaScriptでは数値、文字列、真偽値などをよく使います。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>主な型</h2></div>
+        <ul class="point-list">
+          <li>`number`: 数値</li>
+          <li>`string`: 文字列</li>
+          <li>`boolean`: `true` と `false`</li>
+          <li>`null`: 意図的に空</li>
+          <li>`undefined`: 値が未定義</li>
+        </ul>
+        <pre class="example"><code class="language-javascript">const age = 20;
+const name = "Soshi";
+const isStudent = true;
+let memo;
+const result = null;
+
+console.log(typeof age);
+console.log(typeof name);
+console.log(typeof isStudent);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>文字列と数値の違い</h2></div>
+        <p>見た目が同じでも、型が違うと結果も変わります。</p>
+        <pre class="example"><code class="language-javascript">console.log(10 + 5);    // 15
+console.log("10" + 5);  // 105</code></pre>
+        <div class="note">フォーム入力などでは文字列として受け取ることが多いので、型を意識することが大切です。</div>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>型変換</h2></div>
+        <p>必要に応じて、文字列を数値に変換したり、数値を文字列にしたりします。</p>
+        <pre class="example"><code class="language-javascript">const textNumber = "25";
+const number = Number(textNumber);
+
+console.log(number + 5);
+console.log(String(number));</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>まずは `number`、`string`、`boolean` をしっかり押さえる</li>
+          <li>`typeof` を使うと型の確認ができます</li>
+          <li>入力値を扱うときは、文字列のままか数値へ変換するかを意識します</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

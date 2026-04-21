@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>例外処理 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title">
+        <h1>例外処理</h1>
+      </div>
+      <p class="lead">
+        実行中に起こるエラーに備える仕組みが例外処理です。入力ミスやファイルの存在確認などで特に役立ちます。
+      </p>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>try と except</h2>
+        </div>
+        <p>
+          例外処理を使うと、エラーが出てもそこで強制終了せず、利用者に分かりやすいメッセージを出したり、代わりの処理をしたりできます。
+        </p>
+        <pre class="example"><code class="language-python">try:
+    number = int(input("数字を入力してください: "))
+    print(10 / number)
+except ValueError:
+    print("整数を入力してください")
+except ZeroDivisionError:
+    print("0では割れません")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>else と finally</h2>
+        </div>
+        <ul class="point-list">
+          <li>`else`: 例外が起きなかったときに実行</li>
+          <li>`finally`: 例外の有無に関係なく最後に実行</li>
+        </ul>
+        <pre class="example"><code class="language-python">try:
+    file = open("sample.txt", "r", encoding="utf-8")
+except FileNotFoundError:
+    print("ファイルが見つかりません")
+else:
+    print(file.read())
+finally:
+    print("処理を終了します")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>学び始めのポイント</h2>
+        </div>
+        <ul class="point-list">
+          <li>全部のエラーをまとめて扱うより、原因ごとに分けると分かりやすいです。</li>
+          <li>まずは `ValueError` と `FileNotFoundError` から覚えると実用的です。</li>
+          <li>例外処理は「エラーを隠す」ためではなく、「安全に処理する」ために使います。</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>よくある例外</h2>
+        </div>
+        <ul class="point-list">
+          <li>`ValueError`: 型変換できない値を渡したとき</li>
+          <li>`ZeroDivisionError`: 0で割ろうとしたとき</li>
+          <li>`FileNotFoundError`: ファイルが見つからないとき</li>
+          <li>`IndexError`: 存在しない添字を参照したとき</li>
+        </ul>
+        <pre class="example"><code class="language-python">items = [10, 20]
+
+try:
+    print(items[5])
+except IndexError:
+    print("その位置のデータはありません")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>例外処理を使う場面</h2>
+        </div>
+        <p>
+          ユーザー入力、ファイル読み込み、API通信など、「うまくいかない可能性がある処理」で特に役立ちます。
+          失敗を前提にして書くことで、利用者にも分かりやすいプログラムになります。
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

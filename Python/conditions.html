@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>条件分岐 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title">
+        <h1>条件分岐</h1>
+      </div>
+      <p class="lead">
+        条件分岐は、条件によって処理を変えるための仕組みです。Pythonでは `if`、`elif`、`else` を使って書きます。
+      </p>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>if文の形</h2>
+        </div>
+        <p>
+          条件分岐は「もしこの条件ならこの処理をする」という書き方です。点数、年齢、入力内容などによって結果を変えたいときによく使います。
+        </p>
+        <pre class="example"><code class="language-python">score = 78
+
+if score >= 80:
+    print("合格ラインです")
+elif score >= 60:
+    print("もう少しで高得点です")
+else:
+    print("復習して再挑戦しましょう")</code></pre>
+        <div class="note">
+          Pythonでは波かっこの代わりにインデントで処理のまとまりを表します。
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>比較演算子</h2>
+        </div>
+        <p>条件式では、「比べる」ための記号や、複数条件をまとめるキーワードを使います。</p>
+        <ul class="point-list">
+          <li>`==`: 等しい</li>
+          <li>`!=`: 等しくない</li>
+          <li>`&gt;`, `&lt;`, `&gt;=`, `&lt;=`: 大小比較</li>
+          <li>`and`, `or`, `not`: 条件の組み合わせ</li>
+        </ul>
+        <pre class="example"><code class="language-python">age = 19
+has_id = True
+
+if age >= 18 and has_id:
+    print("入場できます")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>条件分岐を使う場面</h2>
+        </div>
+        <ul class="point-list">
+          <li>ログイン成功か失敗かを分ける</li>
+          <li>テストの点数で評価を変える</li>
+          <li>入力された値が正しいか確認する</li>
+        </ul>
+        <pre class="example"><code class="language-python">command = "save"
+
+if command == "save":
+    print("保存します")
+else:
+    print("別の処理を行います")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>入れ子の条件分岐</h2>
+        </div>
+        <p>
+          条件分岐の中に、さらに別の条件分岐を書くこともできます。ただし増えすぎると読みにくくなるため、
+          まずは順番に条件を並べられないか考えるのが大切です。
+        </p>
+        <pre class="example"><code class="language-python">age = 20
+has_ticket = True
+
+if age >= 18:
+    if has_ticket:
+        print("入場できます")
+    else:
+        print("チケットが必要です")
+else:
+    print("年齢条件を満たしていません")</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>学習のポイント</h2>
+        </div>
+        <ul class="point-list">
+          <li>条件は「何を比べているか」がすぐ分かるように書く</li>
+          <li>分岐が多いときは、上から順にどの条件が先に判定されるか意識する</li>
+          <li>迷ったら `print()` で条件の値を確認しながら進めると理解しやすいです</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

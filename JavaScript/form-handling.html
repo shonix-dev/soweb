@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>フォーム操作 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>フォーム操作</h1></div>
+      <p class="lead">
+        フォーム操作では、入力欄や送信ボタンから値を受け取り、JavaScript で確認や加工を行います。ユーザー入力を扱う基本としてとても重要です。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>入力値の取得</h2></div>
+        <p>フォームでは、入力欄に入った値を受け取って画面表示やチェックに使います。</p>
+        <pre class="example"><code class="language-javascript">const input = document.querySelector("#user-name");
+const button = document.querySelector("#check-button");
+
+button.addEventListener("click", function () {
+  console.log(input.value);
+});</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>送信時の処理</h2></div>
+        <p>フォーム送信では、`submit` イベントと `preventDefault()` をよく使います。</p>
+        <pre class="example"><code class="language-javascript">const form = document.querySelector("#profile-form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log("送信前のチェックを行います");
+});</code></pre>
+        <div class="note">
+          `preventDefault()` を使うと、送信直後の画面遷移を止めて、JavaScript で入力チェックしやすくなります。
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>入力チェックの例</h2></div>
+        <p>空欄かどうかを調べるだけでも、フォーム操作の基本練習になります。</p>
+        <pre class="example"><code class="language-javascript">const input = document.querySelector("#user-name");
+const error = document.querySelector("#error-message");
+
+if (input.value.trim() === "") {
+  error.textContent = "名前を入力してください";
+}</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>入力欄の値は `value` で取得します</li>
+          <li>送信前チェックはフォーム操作の基本です</li>
+          <li>空欄確認や文字数確認など、小さなバリデーションから始めると理解しやすいです</li>
+        </ul>
+        <p>
+          フォーム操作は、要素取得、イベント処理、テキスト更新がまとまって登場するので、DOM操作の総合練習としてもとてもよい題材です。
+        </p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>ループ | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title">
+        <h1>ループ</h1>
+      </div>
+      <p class="lead">
+        同じ処理を何度も繰り返したいときにループを使います。Pythonでは `for` と `while` が基本です。
+      </p>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>for文</h2>
+        </div>
+        <p>回数が決まっている繰り返しや、リストの中身を順に取り出すときに便利です。</p>
+        <pre class="example"><code class="language-python">for i in range(5):
+    print(i)
+
+fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print(fruit)</code></pre>
+        <p class="subtext">
+          `range(5)` は 0 から 4 までの5回分を作ります。
+        </p>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>while文</h2>
+        </div>
+        <p>条件が成り立つ間だけ繰り返します。</p>
+        <pre class="example"><code class="language-python">count = 0
+
+while count < 3:
+    print(count)
+    count += 1</code></pre>
+        <ul class="point-list">
+          <li>`break`: 途中でループを抜ける</li>
+          <li>`continue`: その回だけ残りを飛ばして次へ進む</li>
+        </ul>
+        <pre class="example"><code class="language-python">for number in range(1, 6):
+    if number == 3:
+        continue
+    if number == 5:
+        break
+    print(number)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>ループの活用例</h2>
+        </div>
+        <p>ループは一覧表示、集計、繰り返し入力の処理などでよく使います。</p>
+        <pre class="example"><code class="language-python">scores = [80, 75, 92, 64]
+total = 0
+
+for score in scores:
+    total += score
+
+print(total)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>ループと条件分岐の組み合わせ</h2>
+        </div>
+        <p>
+          ループの中で条件分岐を使うと、繰り返しながら必要なデータだけを選ぶことができます。
+          集計やフィルタの処理で特によく使います。
+        </p>
+        <pre class="example"><code class="language-python">numbers = [3, 8, 12, 15, 20]
+
+for number in numbers:
+    if number % 2 == 0:
+        print(number)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title">
+          <h2>学習のポイント</h2>
+        </div>
+        <ul class="point-list">
+          <li>`for` は回数や対象が決まっているときに使いやすいです。</li>
+          <li>`while` は条件で止めたいときに向いています。</li>
+          <li>`while` では終了条件を書き忘れると無限ループになるので注意します。</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

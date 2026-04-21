@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>APIの基本利用 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>APIの基本利用</h1></div>
+      <p class="lead">
+        APIは、他のサービスやシステムとデータをやりとりするための窓口です。Pythonでは `requests` を使ったHTTP通信がよく登場します。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>基本の流れ</h2></div>
+        <ul class="point-list">
+          <li>URLにリクエストを送る</li>
+          <li>レスポンスを受け取る</li>
+          <li>JSONなどを解析して使う</li>
+        </ul>
+        <pre class="example"><code class="language-python">import requests
+
+url = "https://api.example.com/users"
+response = requests.get(url, timeout=10)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>POST のイメージ</h2></div>
+        <p>取得だけでなく、データを送信するときにもAPIを使います。フォーム送信や新規登録では `POST` がよく登場します。</p>
+        <pre class="example"><code class="language-python">payload = {"name": "Soshi", "score": 90}
+response = requests.post(
+    "https://api.example.com/scores",
+    json=payload,
+    timeout=10,
+)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>よく見る要素</h2></div>
+        <ul class="point-list">
+          <li>HTTPメソッド: `GET`, `POST` など</li>
+          <li>ステータスコード: `200`, `404`, `500` など</li>
+          <li>認証: APIキーやトークン</li>
+        </ul>
+        <div class="note">実際にAPIを使うときは、公式ドキュメントで利用条件や認証方法を確認します。</div>
+        <ul class="point-list">
+          <li>まずは `GET` で取得して `json()` を読むところから覚える</li>
+          <li>通信失敗時の処理も考える</li>
+          <li>認証情報はコードに直接書かず、環境変数などで管理するのが安全です</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

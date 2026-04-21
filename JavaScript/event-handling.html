@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>イベント処理 | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>イベント処理</h1></div>
+      <p class="lead">
+        イベント処理は、クリックや入力などの出来事をきっかけに JavaScript を動かす仕組みです。Webページに「反応」を付ける中心になる考え方です。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>addEventListener</h2></div>
+        <p>
+          イベント処理では、「何が起きたら」「どんな処理をするか」を結び付けます。
+          `addEventListener()` はそのための基本の書き方です。
+        </p>
+        <pre class="example"><code class="language-javascript">const button = document.querySelector("#save-button");
+
+button.addEventListener("click", function () {
+  console.log("ボタンが押されました");
+});</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>よく使うイベント</h2></div>
+        <ul class="point-list">
+          <li>`click`: クリックしたとき</li>
+          <li>`input`: 入力内容が変わったとき</li>
+          <li>`change`: 値の変更が確定したとき</li>
+          <li>`submit`: フォーム送信時</li>
+        </ul>
+        <pre class="example"><code class="language-javascript">const input = document.querySelector("#user-name");
+
+input.addEventListener("input", function () {
+  console.log(input.value);
+});</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>クリックで画面を変える例</h2></div>
+        <p>イベント処理は DOM 操作と組み合わせることで、ページに反応を付けられます。</p>
+        <pre class="example"><code class="language-javascript">const button = document.querySelector("#change-button");
+const message = document.querySelector("#message");
+
+button.addEventListener("click", function () {
+  message.textContent = "ボタンが押されました";
+});</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>「何が起きたら」「何をするか」の形で考えると分かりやすいです</li>
+          <li>まずは `click` と `input` から覚えると実践しやすいです</li>
+          <li>イベント処理は DOM 操作とセットで使う場面が多いです</li>
+        </ul>
+        <div class="note">
+          要素を取得する前に JavaScript が実行されると、イベントを付けたい要素がまだ存在しないことがあります。HTML の読み込み順も意識すると安心です。
+        </div>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

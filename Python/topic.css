@@ -1,0 +1,126 @@
+.title h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #29a987;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.title h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #29a987;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.title h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #1d6f5d;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #1d1d1d;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.8;
+  background: #f7fbfa;
+  margin: 0;
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.lead {
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.section-card {
+  background: #ffffff;
+  border: 1px solid #d7ece5;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(41, 169, 135, 0.06);
+}
+
+.point-list,
+.step-list {
+  padding-left: 24px;
+}
+
+.point-list li,
+.step-list li {
+  margin-bottom: 8px;
+}
+
+.example {
+  background: #0f1720;
+  color: #eff7f5;
+  padding: 18px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.example code {
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-shadow: none;
+}
+
+.subtext {
+  color: #40605a;
+  margin-top: 0;
+}
+
+.mini-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d6f5d;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.note {
+  background: #eef8f4;
+  border-left: 4px solid #29a987;
+  padding: 14px 16px;
+  border-radius: 8px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #0f5ec7;
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  padding: 0 20px 24px;
+}

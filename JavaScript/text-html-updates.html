@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>テキストやHTMLの書き換え | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>テキストやHTMLの書き換え</h1></div>
+      <p class="lead">
+        要素を取得したあとは、その中身を書き換えられます。表示文字を変えたり、新しい HTML を差し込んだりすることで、ページの見た目を動的に更新できます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>textContent</h2></div>
+        <p>`textContent` は、要素の文字だけを安全に書き換えたいときに使います。</p>
+        <pre class="example"><code class="language-javascript">const message = document.querySelector("#message");
+message.textContent = "保存が完了しました";</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>innerHTML</h2></div>
+        <p>`innerHTML` は HTML を含めて書き換えられます。便利ですが、扱いには注意も必要です。</p>
+        <pre class="example"><code class="language-javascript">const result = document.querySelector("#result");
+result.innerHTML = "&lt;strong&gt;重要&lt;/strong&gt;なお知らせ";</code></pre>
+        <div class="note">
+          外部から受け取った文字列をそのまま `innerHTML` に入れるのは危険なことがあります。まずは `textContent` を優先するのが安全です。
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>使う場面</h2></div>
+        <p>
+          検索結果を表示する、送信完了メッセージを出す、ボタンのラベルを変えるなど、画面内容を変えたい場面で使います。
+        </p>
+        <pre class="example"><code class="language-javascript">const button = document.querySelector("#send-button");
+button.textContent = "送信中...";</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>文字だけ変えるなら `textContent`</li>
+          <li>HTMLごと差し替えるなら `innerHTML`</li>
+          <li>更新前にどの要素を変えたいのかを明確にする</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

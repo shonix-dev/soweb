@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>簡単なアプリ制作 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>簡単なアプリ制作</h1></div>
+      <p class="lead">
+        学んだ文法を定着させるには、小さくても完成形のあるアプリを作るのが効果的です。入力、処理、出力を一通り経験できます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>まず作りやすいもの</h2></div>
+        <ul class="point-list">
+          <li>じゃんけんゲーム</li>
+          <li>ToDo管理</li>
+          <li>簡単な家計簿</li>
+          <li>クイズアプリ</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>ミニアプリ例</h2></div>
+        <pre class="example"><code class="language-python">tasks = []
+
+while True:
+    task = input("追加するタスクを入力してください。終了は end: ")
+    if task == "end":
+        break
+    tasks.append(task)
+
+print("登録したタスク")
+for item in tasks:
+    print("-", item)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>アプリ制作で身に付くこと</h2></div>
+        <ul class="point-list">
+          <li>入力、分岐、ループ、関数を組み合わせる力</li>
+          <li>データをどう持つか設計する力</li>
+          <li>使いやすさやエラー処理を考える力</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>作るときの流れ</h2></div>
+        <ul class="point-list">
+          <li>何を入力するか決める</li>
+          <li>どんな処理をするか整理する</li>
+          <li>結果をどう表示・保存するか考える</li>
+        </ul>
+        <p>最初から大きいものを目指すより、1画面・1機能の小さなアプリを積み重ねる方が上達しやすいです。</p>
+        <p>まず動く最小版を作り、そのあとで保存機能や削除機能などを少しずつ追加していく進め方がおすすめです。</p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

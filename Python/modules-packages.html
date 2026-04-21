@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>モジュールとパッケージ | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title">
+        <h1>モジュールとパッケージ</h1>
+      </div>
+      <p class="lead">
+        Pythonでは、処理をファイル単位やフォルダ単位で整理できます。小さく分けて管理することで、再利用しやすく、見通しのよいコードになります。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>モジュールとは</h2></div>
+        <p>1つの `.py` ファイルをモジュールとして使えます。関数や定数を別ファイルに切り出し、`import` で読み込みます。</p>
+        <pre class="example"><code class="language-python"># math_tools.py
+def add(a, b):
+    return a + b
+
+
+# main.py
+import math_tools
+
+print(math_tools.add(3, 5))</code></pre>
+        <div class="note">コードを用途ごとに分けると、修正箇所が見つけやすくなります。</div>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>パッケージとは</h2></div>
+        <p>複数のモジュールをフォルダ単位でまとめたものがパッケージです。機能が増えてきたときに整理しやすくなります。</p>
+        <pre class="example"><code class="language-python">project/
+├─ main.py
+└─ tools/
+   ├─ __init__.py
+   ├─ file_utils.py
+   └─ text_utils.py</code></pre>
+        <pre class="example"><code class="language-python">from tools.file_utils import load_text
+
+content = load_text("memo.txt")
+print(content)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>import の書き方</h2></div>
+        <p>モジュールの読み込みにはいくつかの書き方があります。書き方でコードの見通しや名前の扱い方が変わります。</p>
+        <pre class="example"><code class="language-python">import math
+from math import sqrt
+import math_tools as mt
+
+print(math.pi)
+print(sqrt(16))
+print(mt.add(2, 3))</code></pre>
+        <ul class="point-list">
+          <li>`import module` は、どこから来た処理か分かりやすいです。</li>
+          <li>`from module import name` は短く書けます。</li>
+          <li>`as` を使うと、別名を付けて読みやすくできます。</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>使い分けの考え方</h2></div>
+        <ul class="point-list">
+          <li>1ファイルで十分ならモジュール</li>
+          <li>複数機能を分類したいならパッケージ</li>
+          <li>共通処理は早めに切り出すと保守しやすいです</li>
+        </ul>
+        <p>
+          最初は「長くなったコードを別ファイルに分ける」だけでも十分です。プログラムが大きくなってきたら、
+          機能ごとにフォルダを分ける意識を持つと整理しやすくなります。
+        </p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

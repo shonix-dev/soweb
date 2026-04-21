@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>JSON / CSV の扱い | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>JSON / CSV の扱い</h1></div>
+      <p class="lead">
+        JSONはデータ交換でよく使われ、CSVは表形式データで広く使われます。Pythonではどちらも標準ライブラリで扱えます。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>JSON</h2></div>
+        <pre class="example"><code class="language-python">import json
+
+data = {"name": "Soshi", "score": 90}
+
+with open("data.json", "w", encoding="utf-8") as file:
+    json.dump(data, file, ensure_ascii=False, indent=2)</code></pre>
+        <p class="subtext">`dump` はファイル保存、`load` は読み込みに使います。</p>
+        <pre class="example"><code class="language-python">with open("data.json", "r", encoding="utf-8") as file:
+    loaded = json.load(file)
+
+print(loaded["name"])</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>CSV</h2></div>
+        <pre class="example"><code class="language-python">import csv
+
+rows = [
+    ["name", "score"],
+    ["Soshi", 90],
+    ["Aki", 85],
+]
+
+with open("scores.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerows(rows)</code></pre>
+        <pre class="example"><code class="language-python">with open("scores.csv", "r", encoding="utf-8") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>実務での使いどころ</h2></div>
+        <ul class="point-list">
+          <li>APIのレスポンスはJSONが多い</li>
+          <li>ExcelとやりとりするときはCSVが多い</li>
+          <li>データ保存形式ごとの特徴を知っておくと便利です</li>
+        </ul>
+        <p>
+          階層のあるデータや設定ファイルにはJSON、表形式の一覧データにはCSVが向いています。
+          どちらも実務でよく出るので、保存だけでなく読み込みにも慣れておくと役立ちます。
+        </p>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

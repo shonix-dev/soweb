@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <title>アルゴリズムと計算量 | Python</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="table.html">Pythonのお部屋に戻る</a>
+      <div class="title"><h1>アルゴリズムと計算量</h1></div>
+      <p class="lead">
+        アルゴリズムは問題を解く手順、計算量はその手順がどれくらい効率的かを考える指標です。データ量が増えたときの速さを考えるうえで重要です。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>線形探索の例</h2></div>
+        <pre class="example"><code class="language-python">def linear_search(items, target):
+    for index, item in enumerate(items):
+        if item == target:
+            return index
+    return -1</code></pre>
+        <p class="subtext">先頭から順に見るため、要素数に比例して時間がかかりやすいです。</p>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>なぜ計算量を考えるのか</h2></div>
+        <p>
+          データが少ないときは違いが見えにくくても、件数が増えると処理時間に大きな差が出ることがあります。
+          計算量は、その増え方をざっくり比較する考え方です。
+        </p>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>計算量の見方</h2></div>
+        <ul class="point-list">
+          <li>`O(1)`: 一定時間</li>
+          <li>`O(n)`: データ数に比例</li>
+          <li>`O(n^2)`: 二重ループなどで増えやすい</li>
+        </ul>
+        <pre class="example"><code class="language-python">for a in items:
+    for b in items:
+        print(a, b)</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <p>最初は厳密な証明よりも、「データが大きくなると、どの処理が重くなるか」を意識すると理解しやすいです。</p>
+        <ul class="point-list">
+          <li>二重ループは重くなりやすいと覚える</li>
+          <li>リスト検索と辞書検索の違いに注目する</li>
+          <li>まずは読みやすさと必要十分な速さの両立を目指す</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>

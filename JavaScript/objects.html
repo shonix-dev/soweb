@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="topic.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>オブジェクト | JavaScript</title>
+  </head>
+  <body>
+    <main>
+      <a class="back-link" href="index.html">JavaScriptの部屋に戻る</a>
+      <div class="title"><h1>オブジェクト</h1></div>
+      <p class="lead">
+        オブジェクトは、名前付きのデータをひとまとめにするための仕組みです。人や商品など、属性を持つものを表すのに向いています。
+      </p>
+
+      <section class="section-card">
+        <div class="title"><h2>基本</h2></div>
+        <pre class="example"><code class="language-javascript">const student = {
+  name: "Soshi",
+  grade: 2,
+  club: "tennis",
+};
+
+console.log(student.name);
+console.log(student["grade"]);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>プロパティの追加</h2></div>
+        <pre class="example"><code class="language-javascript">student.score = 90;
+console.log(student);</code></pre>
+        <p class="subtext">配列が順番で管理するのに対して、オブジェクトは名前で管理します。</p>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>使う場面</h2></div>
+        <p>人、商品、記事のように、名前付きの属性をまとめて持たせたいときにオブジェクトが向いています。</p>
+        <pre class="example"><code class="language-javascript">const product = {
+  name: "ペン",
+  price: 120,
+  stock: 10,
+};
+
+console.log(`${product.name}は${product.price}円です`);</code></pre>
+      </section>
+
+      <section class="section-card">
+        <div class="title"><h2>学習のポイント</h2></div>
+        <ul class="point-list">
+          <li>順番重視なら配列、名前付き管理ならオブジェクト</li>
+          <li>`.name` と `["name"]` の両方の書き方があります</li>
+          <li>配列の中にオブジェクトを入れる形もよく使います</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>&copy; 2026 Soshi Oniki. All rights reserved.</p></footer>
+  </body>
+</html>
