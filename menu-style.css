@@ -1,34 +1,107 @@
+:root {
+  --accent: #29a987;
+  --accent-dark: #1d7f66;
+  --text: #18312a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fbfcfa;
+}
+
 .menu-button {
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: none;
+  border-radius: 14px;
+  background: #ffffff;
   cursor: pointer;
   z-index: 1000;
 }
 
 .bar {
-  width: 30px;
-  height: 5px;
-  background-color: black;
-  margin: 6px 0;
-  transition: 0.3s;
+  width: 24px;
+  height: 3px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background-color: var(--text);
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
+
+.menu-button[aria-expanded="true"] .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button[aria-expanded="true"] .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 .menu {
   position: fixed;
-  top: 0;
-  right: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #333;
-  transition: 0.3s;
-  padding-top: 60px;
+  top: 16px;
+  right: 16px;
+  width: min(320px, calc(100% - 32px));
+  padding: 88px 18px 18px;
+  border: none;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(24, 49, 42, 0.12);
+  transform: translateX(calc(100% + 32px));
+  transition: transform 0.3s ease;
+  z-index: 900;
 }
+
+.menu.is-open {
+  transform: translateX(0);
+}
+
 .menu a {
   display: block;
-  color: white;
-  padding: 15px;
+  margin-bottom: 8px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: var(--text);
+  font-weight: 700;
   text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
-.menu a:hover {
-  background-color: #575757;
+
+.menu a:hover,
+.menu a:focus-visible {
+  background-color: #f1f7f4;
+}
+
+.menu a[aria-current="page"] {
+  background: #e6f4ee;
+  color: #145645;
+}
+
+@media (max-width: 640px) {
+  .menu-button {
+    top: 14px;
+    right: 14px;
+  }
+
+  .menu {
+    top: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+  }
 }

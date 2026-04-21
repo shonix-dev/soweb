@@ -13,45 +13,74 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <meta
+      name="description"
+      content="JavaScript、C/C++/C#、Python、Enchant.js、Scratch などの学習コンテンツをまとめています。"
+    />
     <script src="script.js" defer></script>
 
-    <title>プログラミング関係</title>
+    <title>プログラミング関係 | Soshi Oniki</title>
   </head>
   <body>
-    <div class="menu-button">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="global-menu"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-    <nav class="menu" aria-label="グローバルナビゲーション">
+    <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
       <a href="index.html">ホーム</a>
       <a href="introduction.html">プロフィール</a>
-      <a href="programming.html">プログラミング関係</a>
-      <a href="#">設定</a>
+      <a href="programing.html" aria-current="page">プログラミング関係</a>
     </nav>
 
     <main>
-      <div class="title">
-        <h1>プログラミング関係</h1>
-      </div>
+      <section class="hero">
+        <div class="title">
+          <h1>プログラミング関係</h1>
+        </div>
+        <p>
+          言語ごとに、学習用のページをまとめています。
+          まずは基礎から読めるようにしつつ、少しずつ内容を増やしていく予定です。
+        </p>
+      </section>
 
-      <nav aria-label="サブナビゲーション">
-        <ul>
-          <li><a href="JavaScript/index.html">JavaScript</a></li>
-          <li><a href="C/table.html">C/C++/C#</a></li>
-          <li><a href="Python/table.html">Python</a></li>
-          <li><a href="Enchant_js/table.html">Enchant.js</a></li>
-          <li><a href="scratch/table.html">Scratch</a></li>
-        </ul>
-      </nav>
+      <section class="course-grid" aria-label="教材一覧">
+        <a class="course-card" href="JavaScript/index.html">
+          <h2>JavaScript</h2>
+          <p>Webページに動きをつけるための言語です。これから内容を増やしていきます。</p>
+        </a>
+        <a class="course-card" href="C/table.html">
+          <h2>C / C++ / C#</h2>
+          <p>文法の基礎から標準入出力、C# の基本までまとめています。</p>
+        </a>
+        <a class="course-card" href="Python/table.html">
+          <h2>Python</h2>
+          <p>文法が比較的わかりやすく、最初の学習にも向いている言語です。</p>
+        </a>
+        <a class="course-card" href="Enchant_js/table.html">
+          <h2>Enchant.js</h2>
+          <p>JavaScript を使ってゲーム制作に触れられる教材です。</p>
+        </a>
+        <a class="course-card" href="scratch/table.html">
+          <h2>Scratch</h2>
+          <p>ブロックを組み合わせながら、考え方の基礎を学べます。</p>
+        </a>
+        <div class="course-card coming-soon">
+          <h2>今後の追加予定</h2>
+          <p>練習問題や学習順の案内なども、今後少しずつ追加していく予定です。</p>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
     </footer>
   </body>
 </html>

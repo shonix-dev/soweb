@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -14,41 +14,56 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- ここまで -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>ホーム</title>
+    <meta
+      name="description"
+      content="鬼木壮士の自己紹介とプログラミング教材をまとめたポートフォリオサイトです。"
+    />
+    <title>ホーム | Soshi Oniki</title>
   </head>
   <body>
-    <div class="menu-button">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="global-menu"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-    <nav class="menu">
-      <a href="index.html">ホーム</a>
+    <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
+      <a href="index.html" aria-current="page">ホーム</a>
       <a href="introduction.html">プロフィール</a>
       <a href="programing.html">プログラミング関係</a>
-      <a href="#">設定</a>
     </nav>
-    <div class="title">
-      <h1>ホーム</h1>
-    </div>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">自己紹介と学習メモ</span>
+        <div class="title">
+          <h1>自己紹介や、学んでいることをまとめたサイトです。</h1>
+        </div>
+        <p class="lead">
+          自分のことや、大学で学んでいること、これまで作ってきた教材などを少しずつ整理しています。
+          まだ発展途中ですが、見やすく、わかりやすい形にしていくつもりです。
+        </p>
+        <div class="hero-links">
+          <a class="button-link primary" href="introduction.html">プロフィールを見る</a>
+          <a class="button-link secondary" href="programing.html">教材ページへ進む</a>
+        </div>
+      </section>
 
-    <h2>更新情報</h2>
-    <div
-      style="
-        width: 500px;
-        height: 100px;
-        padding: 5px;
-        border: solid 1px #999;
-        overflow: scroll;
-      "
-    >
-      2025/3/9:サイト作成<br />
-    </div>
+      <section class="section-card" aria-labelledby="updates-heading">
+        <h2 id="updates-heading">更新情報</h2>
+        <ul class="updates">
+          <li>2025/03/09: サイトを作成</li>
+          <li>2026/04/21: ナビゲーション、デザイン、README を整理</li>
+        </ul>
+      </section>
+    </main>
     <footer>
-      <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
     </footer>
   </body>
 </html>

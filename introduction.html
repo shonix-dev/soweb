@@ -14,30 +14,40 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- ここまで -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>自己紹介</title>
+    <meta
+      name="description"
+      content="鬼木壮士の経歴、専門分野、活動内容を紹介するプロフィールページです。"
+    />
+    <title>プロフィール | Soshi Oniki</title>
   </head>
   <body>
-    <div class="menu-button">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <nav class="menu">
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="global-menu"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="menu" id="global-menu" aria-label="グローバルナビゲーション">
       <a href="index.html">ホーム</a>
-      <a href="introduction.html">プロフィール</a>
+      <a href="introduction.html" aria-current="page">プロフィール</a>
       <a href="programing.html">プログラミング関係</a>
-      <a href="#">設定</a>
     </nav>
-    <div class="title">
-      <h1>自己紹介</h1>
-    </div>
-    <div class="img-container">
-      <img src="onigiri.png" alt="おにぎりの画像" />
-      <div class="container">
+    <main class="page-shell">
+      <div class="title">
+        <h1>プロフィール</h1>
+      </div>
+      <p class="subtitle">
+        これまでの経験や、今取り組んでいることをまとめています。
+      </p>
+      <section class="profile-hero">
+        <img src="onigiri.png" alt="鬼木壮士のプロフィール画像" />
         <div class="introduction">
-          <h1>鬼木 壮士（おにぎり）</h1>
+          <h2>鬼木 壮士（おにぎり）</h2>
           <p>
             2005年1月生まれ。幼少期より英語学習を始め、現在まで約10年以上にわたり学習を続けている。
             これまでに英検5級から2級までのすべての級に合格した。
@@ -49,31 +59,33 @@
             また、アルバイトとしてLITALICOワンダーの講師（メンター）を務め、子供たちにものづくりの楽しさを伝える活動にも力を注いでいる。
           </p>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="resume">
-      <h2>経歴</h2>
-      <ul>
-        <li>工学院大学附属高等学校 卒業</li>
-        <li>東京国際工科専門職大学 工科学部 情報工学科 AI戦略コース 在籍中</li>
-        <li>LITALICOワンダー新宿教室 講師（メンター）</li>
-      </ul>
-    </div>
+      <section class="panel-grid">
+        <div class="panel">
+          <h3>経歴</h3>
+          <ul>
+            <li>工学院大学附属高等学校 卒業</li>
+            <li>東京国際工科専門職大学 工科学部 情報工学科 AI戦略コース 在籍中</li>
+            <li>LITALICOワンダー新宿教室 講師（メンター）</li>
+          </ul>
+        </div>
 
-    <div class="specialize">
-      <h2>専門分野</h2>
-      <ul>
-        <li>英語全般</li>
-        <li>情報工学（特に人工知能）</li>
-        <li>プログラミング教育</li>
-        <li>Scratchを用いたブロックプログラミング</li>
-        <li>Python/C/C#/JavaScriptなど</li>
-      </ul>
-    </div>
+        <div class="panel">
+          <h3>専門分野</h3>
+          <ul>
+            <li>英語全般</li>
+            <li>情報工学（特に人工知能）</li>
+            <li>プログラミング教育</li>
+            <li>Scratchを用いたブロックプログラミング</li>
+            <li>Python/C/C#/JavaScript など</li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <p>&copy; 2025 Soshi Oniki. All rights reserved.</p>
+      <p>&copy; 2026 Soshi Oniki. All rights reserved.</p>
     </footer>
   </body>
 </html>

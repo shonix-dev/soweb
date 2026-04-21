@@ -1,66 +1,106 @@
-.title h1 {
-  font-family: "Noto Sans JP", sans-serif;
-  color: #29a987;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 50px;
-}
-
 body {
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
+  line-height: 1.8;
 }
 
-.img-container {
+.page-shell {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 88px 0 48px;
+}
+
+.title h1 {
+  margin: 0 0 12px;
+  color: #18312a;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: #4a655e;
+  line-height: 1.9;
+}
+
+.profile-hero {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  width: auto;
-}
-
-.name {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 10px 0px;
-}
-
-.text {
-  margin: 10px 0px;
+  gap: 24px;
+  padding: 28px;
+  border-radius: 18px;
+  background: #f5f8f6;
 }
 
 .introduction {
-  border: 1.5px black solid;
-  border-radius: 10px;
-  padding: 5px;
-  max-width: 900px;
+  flex: 1;
+  max-width: 760px;
 }
 
 img {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
+  border-radius: 16px;
+}
+
+.introduction h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  color: #1d7f66;
+}
+
+.introduction p {
+  margin-bottom: 0;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.panel {
+  padding: 24px 28px;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.panel h3 {
+  margin-top: 0;
+  color: #1d7f66;
+  font-size: 1.25rem;
+}
+
+.panel ul {
+  margin-bottom: 0;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 480px) {
-  .img-container {
-    display: flex;
+  .page-shell {
+    padding-top: 84px;
+  }
+
+  .profile-hero {
     flex-direction: column;
-    align-items: center;
-    width: auto;
+    padding: 22px;
   }
 
   img {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+    height: auto;
   }
 
-  .text {
-    align-self: flex-start;
+  .panel-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 footer {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 0 0 32px;
+  color: #4a655e;
   font-size: 15px;
 }
