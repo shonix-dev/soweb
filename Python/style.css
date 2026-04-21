@@ -1,49 +1,97 @@
-.title h1 {
-  font-family: "Noto Sans JP", sans-serif;
-  color: #29a987;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 50px;
-}
-
-h2 {
-  font-family: "Noto Sans JP", sans-serif;
-  color: #29a987;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 35px;
-}
-
-h3 {
-  font-family: "Noto Sans JP", sans-serif;
-  color: #29a987;
-  font-weight: 800;
-  font-style: normal;
-  font-size: 25px;
-}
-
 body {
   font-family: "Noto Sans JP", sans-serif;
-  color: black;
+  color: #16332b;
   font-weight: 400;
-  font-style: normal;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+  background:
+    radial-gradient(circle at top right, rgba(41, 169, 135, 0.16), transparent 28%),
+    linear-gradient(180deg, #f5fbf8 0%, #edf7f3 100%);
 }
 
-.gtitle {
-  font-size: 24px;
-  color: black;
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 36px 20px 56px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #ffffff 0%, #eef8f4 100%);
+  border: 1px solid #d7ece5;
+  border-radius: 24px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 18px 40px rgba(24, 92, 76, 0.08);
+  margin-bottom: 28px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 10px 16px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: #1e8e73;
+  color: #ffffff !important;
   font-weight: 700;
+  box-shadow: 0 10px 22px rgba(30, 142, 115, 0.18);
+}
+
+.title h1 {
+  font-size: clamp(38px, 5vw, 56px);
+  color: #1e8e73;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.title h2 {
+  color: #1e8e73;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0 0 16px;
+}
+
+.lead {
+  font-size: 17px;
+  margin: 0;
+  max-width: 760px;
+}
+
+.course-section {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d7ece5;
+  border-radius: 22px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 14px 32px rgba(24, 92, 76, 0.06);
+}
+
+.topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.topic-list li {
+  background: #f7fcfa;
+  border: 1px solid #ddf1eb;
+  border-radius: 14px;
+  padding: 12px 14px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-  color: blue; /* 常に青 */
-  text-decoration: underline;
-}
-
-footer {
-  font-size: 12px;
+  color: #0c63ce;
+  text-decoration: none;
+  font-weight: 500;
 }

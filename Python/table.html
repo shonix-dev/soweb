@@ -14,76 +14,93 @@
     <title>Pythonのお部屋</title>
   </head>
   <body>
-    <div class="title">
-      <h1>Pythonのお部屋</h1>
-    </div>
+    <main class="page">
+      <section class="hero">
+        <a class="back-button" href="../programing.html">戻る</a>
+        <div class="title">
+          <h1>Pythonのお部屋</h1>
+        </div>
+        <p class="lead">
+          Pythonの基礎から実践、データ分析、機械学習までを少しずつ整理している教材一覧です。
+          学びたいテーマごとにページをたどれるようにまとめています。
+        </p>
+      </section>
 
-    <div class="title">
-      <h2>Python基礎</h2>
-    </div>
-    <ul>
-      <li>
-        <a href="Python_basic.pdf" target="_blank" rel="noopener noreferrer"
-          >Python基礎</a
-        >
-      </li>
-      <li><a href="variables-data-types.html">変数とデータ型</a></li>
-      <li><a href="conditions.html">条件分岐</a></li>
-      <li><a href="loops.html">ループ</a></li>
-      <li><a href="functions.html">関数</a></li>
-      <li><a href="collections.html">リスト・辞書・タプル・集合</a></li>
-      <li><a href="strings.html">文字列操作</a></li>
-      <li><a href="exceptions.html">例外処理</a></li>
-      <li><a href="file-io.html">ファイル入出力</a></li>
-    </ul>
+      <section class="course-section">
+        <div class="title">
+          <h2>Python基礎</h2>
+        </div>
+        <ul class="topic-list">
+          <li>
+            <a href="Python_basic.pdf" target="_blank" rel="noopener noreferrer"
+              >Python基礎</a
+            >
+          </li>
+          <li><a href="variables-data-types.html">変数とデータ型</a></li>
+          <li><a href="conditions.html">条件分岐</a></li>
+          <li><a href="loops.html">ループ</a></li>
+          <li><a href="functions.html">関数</a></li>
+          <li><a href="collections.html">リスト・辞書・タプル・集合</a></li>
+          <li><a href="strings.html">文字列操作</a></li>
+          <li><a href="exceptions.html">例外処理</a></li>
+          <li><a href="file-io.html">ファイル入出力</a></li>
+        </ul>
+      </section>
 
-    <div class="title">
-      <h2>実践Python</h2>
-    </div>
-    <ul>
-      <li><a href="modules-packages.html">モジュールとパッケージ</a></li>
-      <li><a href="classes-oop.html">クラスとオブジェクト指向</a></li>
-      <li><a href="venv-pip.html">仮想環境と pip</a></li>
-      <li><a href="standard-library.html">標準ライブラリ活用</a></li>
-      <li><a href="json-csv.html">JSON / CSV の扱い</a></li>
-      <li><a href="api-basics.html">APIの基本利用</a></li>
-      <li><a href="web-scraping.html">Webスクレイピング</a></li>
-      <li><a href="automation-scripts.html">自動化スクリプト</a></li>
-      <li><a href="testing-intro.html">テスト入門</a></li>
-      <li><a href="algorithms-complexity.html">アルゴリズムと計算量</a></li>
-      <li><a href="sql-python.html">SQL と Python</a></li>
-      <li><a href="simple-apps.html">簡単なアプリ制作</a></li>
-    </ul>
+      <section class="course-section">
+        <div class="title">
+          <h2>実践Python</h2>
+        </div>
+        <ul class="topic-list">
+          <li><a href="modules-packages.html">モジュールとパッケージ</a></li>
+          <li><a href="classes-oop.html">クラスとオブジェクト指向</a></li>
+          <li><a href="venv-pip.html">仮想環境と pip</a></li>
+          <li><a href="standard-library.html">標準ライブラリ活用</a></li>
+          <li><a href="json-csv.html">JSON / CSV の扱い</a></li>
+          <li><a href="api-basics.html">APIの基本利用</a></li>
+          <li><a href="web-scraping.html">Webスクレイピング</a></li>
+          <li><a href="automation-scripts.html">自動化スクリプト</a></li>
+          <li><a href="testing-intro.html">テスト入門</a></li>
+          <li><a href="algorithms-complexity.html">アルゴリズムと計算量</a></li>
+          <li><a href="sql-python.html">SQL と Python</a></li>
+          <li><a href="simple-apps.html">簡単なアプリ制作</a></li>
+        </ul>
+      </section>
 
-    <div class="title">
-      <h2>データ分析</h2>
-    </div>
-    <ul>
-      <li>NumPy 基礎</li>
-      <li>pandas 基礎</li>
-      <li>データの前処理</li>
-      <li>可視化</li>
-      <li>統計の基礎</li>
-      <li>EDA（探索的データ分析）</li>
-    </ul>
+      <section class="course-section">
+        <div class="title">
+          <h2>データ分析</h2>
+        </div>
+        <ul class="topic-list">
+          <li>NumPy 基礎</li>
+          <li>pandas 基礎</li>
+          <li>データの前処理</li>
+          <li>可視化</li>
+          <li>統計の基礎</li>
+          <li>EDA（探索的データ分析）</li>
+        </ul>
+      </section>
 
-    <div class="title">
-      <h2>機械学習・深層学習</h2>
-    </div>
-    <ul>
-      <li>回帰分析</li>
-      <li>分類</li>
-      <li>クラスタリング</li>
-      <li>モデル評価</li>
-      <li>特徴量エンジニアリング</li>
-      <li>過学習と正則化</li>
-      <li>scikit-learn 入門</li>
-      <li>ニューラルネットワーク基礎</li>
-      <li>誤差逆伝播</li>
-      <li>PyTorch または TensorFlow 入門</li>
-      <li>画像分類</li>
-      <li>NLP の基礎</li>
-      <li>学習曲線とチューニング</li>
-    </ul>
+      <section class="course-section">
+        <div class="title">
+          <h2>機械学習・深層学習</h2>
+        </div>
+        <ul class="topic-list">
+          <li>回帰分析</li>
+          <li>分類</li>
+          <li>クラスタリング</li>
+          <li>モデル評価</li>
+          <li>特徴量エンジニアリング</li>
+          <li>過学習と正則化</li>
+          <li>scikit-learn 入門</li>
+          <li>ニューラルネットワーク基礎</li>
+          <li>誤差逆伝播</li>
+          <li>PyTorch または TensorFlow 入門</li>
+          <li>画像分類</li>
+          <li>NLP の基礎</li>
+          <li>学習曲線とチューニング</li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>

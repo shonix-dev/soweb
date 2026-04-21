@@ -1,6 +1,6 @@
 .title h1 {
   font-family: "Noto Sans JP", sans-serif;
-  color: #29a987;
+  color: #1e78d7;
   font-weight: 800;
   font-size: 44px;
   margin-bottom: 8px;
@@ -8,7 +8,7 @@
 
 .title h2 {
   font-family: "Noto Sans JP", sans-serif;
-  color: #29a987;
+  color: #1e78d7;
   font-weight: 800;
   font-size: 30px;
   margin-top: 40px;
@@ -20,7 +20,9 @@ body {
   color: #1d1d1d;
   font-size: 16px;
   line-height: 1.8;
-  background: #f7fbfa;
+  background:
+    radial-gradient(circle at top left, rgba(46, 124, 255, 0.14), transparent 24%),
+    linear-gradient(180deg, #f6fbff 0%, #eef5fb 100%);
   margin: 0;
 }
 
@@ -42,11 +44,11 @@ main {
 
 .section-card {
   background: #ffffff;
-  border: 1px solid #d7ece5;
+  border: 1px solid #d7e8f8;
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 24px;
-  box-shadow: 0 10px 30px rgba(41, 169, 135, 0.06);
+  box-shadow: 0 10px 30px rgba(30, 120, 215, 0.08);
 }
 
 .point-list {
@@ -76,13 +78,13 @@ main {
 }
 
 .subtext {
-  color: #40605a;
+  color: #44617c;
   margin-top: 0;
 }
 
 .note {
-  background: #eef8f4;
-  border-left: 4px solid #29a987;
+  background: #eef5ff;
+  border-left: 4px solid #1e78d7;
   padding: 14px 16px;
   border-radius: 8px;
 }
